@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nginx on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/nginx/</link>
+    <link>https://isprometheo.github.io/tags/nginx/</link>
     <description>Recent content in nginx on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 Apr 2015 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Python] nginx &#43; gunicorn &#43; Django</title>
-      <link>isprometheo.github.io/posts/4/</link>
+      <link>https://isprometheo.github.io/posts/4/</link>
       <pubDate>Sun, 12 Apr 2015 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/4/</guid>
+      <guid>https://isprometheo.github.io/posts/4/</guid>
       <description>Django 프로젝트의 settings.py에 다음을 추가한다. STATIC_ROOT = os.path.join(BASE_DIR, &#39;static&#39;) 그리고 다음 명령어를 이용하여 Django에 내장된 static 파일을 지정한 디렉토리에 저장한다. $ python manage.py collectstatic gunicorn 관련된 설정은 공식 문서와 예제 파일을 참고하여 작성한다.</description>
     </item>
     
     <item>
       <title>[Python] nginx &#43; Django</title>
-      <link>isprometheo.github.io/posts/1/</link>
+      <link>https://isprometheo.github.io/posts/1/</link>
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/1/</guid>
+      <guid>https://isprometheo.github.io/posts/1/</guid>
       <description>Django와 nginx를 연동하기 위해서 flup 라이브러리를 설치한다. $ pip install flup Django 실행은 다음과 같다. $ python manage.py runfcgi method=prefork pidfile=PID_FILE host=127.0.0.1 port=8000 nginx.conf 에 다음과 같이 추가한다. server { listen 80 server_name localhost; location /static/ { #static url autoindex on; root /static/; #static 파일들이 저장된 디렉토리 } location / { #사용</description>
     </item>
     

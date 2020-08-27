@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>logstash on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/logstash/</link>
+    <link>https://isprometheo.github.io/tags/logstash/</link>
     <description>Recent content in logstash on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/logstash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/logstash/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Log] Logstash 403 에러 해결</title>
-      <link>isprometheo.github.io/posts/54/</link>
+      <link>https://isprometheo.github.io/posts/54/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/54/</guid>
+      <guid>https://isprometheo.github.io/posts/54/</guid>
       <description>ELK를 구성하여 로그를 잘 쌓고 있었는데 어느 날 로그가 수집되고 있지 않았다. 원인을 찾기 위해 Logstash의 로그(/var/log/logstash/logstash-plain.log)를 열어봤다. [INFO ][logstash.outputs.elasticsearch] retrying failed</description>
     </item>
     
     <item>
       <title>[Log] Logstash Kafka 연동 에러 해결</title>
-      <link>isprometheo.github.io/posts/40/</link>
+      <link>https://isprometheo.github.io/posts/40/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/40/</guid>
+      <guid>https://isprometheo.github.io/posts/40/</guid>
       <description>Lostash에서 input으로 kafka를 사용하고 있었는데 다음과 같은 오류가 나왔다. [WARN ][org.apache.kafka.common.utils.AppInfoParser] Error registering AppInfo mbean javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=logstash-1 at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:436) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1855) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:955) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320) ~[?:?] at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522) ~[?:?] 중복되는 설정들이 많아 합치면서 pipeline을 사용하도록 수정했는</description>
     </item>
     
     <item>
       <title>[Log] Logstash Pipeline 사용하기</title>
-      <link>isprometheo.github.io/posts/39/</link>
+      <link>https://isprometheo.github.io/posts/39/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/39/</guid>
+      <guid>https://isprometheo.github.io/posts/39/</guid>
       <description>Logstash에서 pipeline으로 개별로 설정을 하여 로그를 수집할 수 있다. 그래서 input, filter, output으로 나누어 사용하기 위해 다음과 같이 디렉토리를 구분하여 pipelines.yml을 설정했다. - pipeline.id: input path.config: &amp;quot;/etc/path/to/input.conf&amp;quot; - pipeline.id:</description>
     </item>
     
     <item>
       <title>[Log] Fluentd Kafka Logstash 연동</title>
-      <link>isprometheo.github.io/posts/23/</link>
+      <link>https://isprometheo.github.io/posts/23/</link>
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/23/</guid>
+      <guid>https://isprometheo.github.io/posts/23/</guid>
       <description>ELK를 이용하여 로그 수집/분석을 하기 위해 Fluentd와 Kafka를 연동할 필요가 있었다. 그래서 Fluentd에서 Kafka로 로그를 전송할 수 있도록 설정을 추가했는데 Kafka가 죽어서(원인은 파악하지 못했다</description>
     </item>
     

@@ -2,138 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>log on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/log/</link>
+    <link>https://isprometheo.github.io/tags/log/</link>
     <description>Recent content in log on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Log] Zeppelin 크론 설정하기</title>
-      <link>isprometheo.github.io/posts/75/</link>
+      <link>https://isprometheo.github.io/posts/75/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/75/</guid>
+      <guid>https://isprometheo.github.io/posts/75/</guid>
       <description>이번에 프로젝트를 수행하면서 일별로 데이터를 분석할 필요가 있었다. 처음엔 수동으로 작업을 했는데 자동으로 구동되면 좋을 것 같아서 찾아보니 역시나 기능이 있었다. $ZEPPELIN_HOME/conf/zeppelin-site.xml 에서 주석으로 돼있는 내용을 풀고 다음과 같이 수정하면 된다. (zeppelin.notebook.cron.folders 에</description>
     </item>
     
     <item>
       <title>[Log] ElasticSearch _default_ mapping 문제 해결</title>
-      <link>isprometheo.github.io/posts/63/</link>
+      <link>https://isprometheo.github.io/posts/63/</link>
       <pubDate>Thu, 28 May 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/63/</guid>
+      <guid>https://isprometheo.github.io/posts/63/</guid>
       <description>ElasticSearch에서 다음과 같은 로그가 발생했었다. [WARN ][o.e.d.i.m.MapperService ] [_default_] mapping is deprecated since it is not useful anymore now that indexes cannot have more than one type 이 로그는 _default_ mapping을 사용해서 발생하는 문제로 6.0.0 부터 Deprecated 되어 실제 적용된 매핑 타입으로 적용하면 된다. 그</description>
     </item>
     
     <item>
       <title>[Log] HDFS Web UI Permission denied</title>
-      <link>isprometheo.github.io/posts/56/</link>
+      <link>https://isprometheo.github.io/posts/56/</link>
       <pubDate>Thu, 02 Apr 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/56/</guid>
+      <guid>https://isprometheo.github.io/posts/56/</guid>
       <description>HADOOP을 설치하고 웹에서 파일을 추가하거나 삭제할 수 있는데 다음과 같은 에러가 나면서 되지 않았다. Permission denied: user=dr.who, access=WRITE, inode=&amp;quot;/path/to/file&amp;quot;:current_user:supergroup:drwxr-xr-x 현재 HADOOP이 실행되고 있는 환경의 사용자 권한이 추가되지 않아 생기는 에러로 etc/hadoop/co</description>
     </item>
     
     <item>
       <title>[Log] librdkafka 빌드하기</title>
-      <link>isprometheo.github.io/posts/55/</link>
+      <link>https://isprometheo.github.io/posts/55/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/55/</guid>
+      <guid>https://isprometheo.github.io/posts/55/</guid>
       <description>golang 프로젝트의 로그를 수집하기 위해 confluent-kafka-go를 이용했다. 이를 위해서 librdkafka를 설치해야 하는데 confluent-kafka-go 최신 버전의 경우 1.3.0 이상을 사용해야 한다는 에러가 났다. CeontOS 7에서 yum으로 설치하는</description>
     </item>
     
     <item>
       <title>[Log] Logstash 403 에러 해결</title>
-      <link>isprometheo.github.io/posts/54/</link>
+      <link>https://isprometheo.github.io/posts/54/</link>
       <pubDate>Thu, 19 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/54/</guid>
+      <guid>https://isprometheo.github.io/posts/54/</guid>
       <description>ELK를 구성하여 로그를 잘 쌓고 있었는데 어느 날 로그가 수집되고 있지 않았다. 원인을 찾기 위해 Logstash의 로그(/var/log/logstash/logstash-plain.log)를 열어봤다. [INFO ][logstash.outputs.elasticsearch] retrying failed</description>
     </item>
     
     <item>
       <title>[Log] Airflow 설치</title>
-      <link>isprometheo.github.io/posts/53/</link>
+      <link>https://isprometheo.github.io/posts/53/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/53/</guid>
+      <guid>https://isprometheo.github.io/posts/53/</guid>
       <description>Spark에서 하는 일을 주기적으로 수행하기 위해 무엇이 있는지 조사했다. 여러 가지 도구들이 있었는데 그 중에서 Airflow와 Luigi가 좋아보였다. 둘 중에 어떤 걸로 정할 지 고민하다 Airflow로 정했다. 두 가지 모두</description>
     </item>
     
     <item>
       <title>[Log] Zeppelin 설치 및 Spark 연동</title>
-      <link>isprometheo.github.io/posts/52/</link>
+      <link>https://isprometheo.github.io/posts/52/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/52/</guid>
+      <guid>https://isprometheo.github.io/posts/52/</guid>
       <description>Zeppelin은 웹 기반으로 다양한 인터프리터를 이용해서 데이터 분석을 도와주는 도구이다. 설치를 위해서 다음과 같이 하면 된다. $ sudo yum install -y java-1.8.0-openjdk.x86_64 $ wget http://mirror.apache-kr.org/zeppelin/zeppelin-0.8.2/zeppelin-0.8.2-bin-all.tgz $ tar xf zeppelin-0.8.2-bin-all.tgz &amp;amp;&amp;amp; cd zeppelin-0.8.2-bin-all 다음과 같이 실행하면 Zeppelin이 구동된다. $ bin/zeppelin-daemon.sh start</description>
     </item>
     
     <item>
       <title>[Log] NoNodesAvailable 에러 해결</title>
-      <link>isprometheo.github.io/posts/51/</link>
+      <link>https://isprometheo.github.io/posts/51/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/51/</guid>
+      <guid>https://isprometheo.github.io/posts/51/</guid>
       <description>다음과 같이 각 서버에 Fluentd를 설치해 수집하는 서버로 로그를 전송하고 Kafka를 일종의 버퍼로 하여 ELK 스택이나 다른 것들을 이용할 수 있도록 구성했다. 각 서버에서 tail로 로그 파일을 읽어서 forward로 송/수신</description>
     </item>
     
     <item>
       <title>[Log] Spark ElasticSearch Parquet</title>
-      <link>isprometheo.github.io/posts/46/</link>
+      <link>https://isprometheo.github.io/posts/46/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/46/</guid>
+      <guid>https://isprometheo.github.io/posts/46/</guid>
       <description>로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년</description>
     </item>
     
     <item>
       <title>[Log] Logstash Kafka 연동 에러 해결</title>
-      <link>isprometheo.github.io/posts/40/</link>
+      <link>https://isprometheo.github.io/posts/40/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/40/</guid>
+      <guid>https://isprometheo.github.io/posts/40/</guid>
       <description>Lostash에서 input으로 kafka를 사용하고 있었는데 다음과 같은 오류가 나왔다. [WARN ][org.apache.kafka.common.utils.AppInfoParser] Error registering AppInfo mbean javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=logstash-1 at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:436) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1855) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:955) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320) ~[?:?] at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522) ~[?:?] 중복되는 설정들이 많아 합치면서 pipeline을 사용하도록 수정했는</description>
     </item>
     
     <item>
       <title>[Log] Logstash Pipeline 사용하기</title>
-      <link>isprometheo.github.io/posts/39/</link>
+      <link>https://isprometheo.github.io/posts/39/</link>
       <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/39/</guid>
+      <guid>https://isprometheo.github.io/posts/39/</guid>
       <description>Logstash에서 pipeline으로 개별로 설정을 하여 로그를 수집할 수 있다. 그래서 input, filter, output으로 나누어 사용하기 위해 다음과 같이 디렉토리를 구분하여 pipelines.yml을 설정했다. - pipeline.id: input path.config: &amp;quot;/etc/path/to/input.conf&amp;quot; - pipeline.id:</description>
     </item>
     
     <item>
       <title>[Log] Fluentd 성능 튜닝</title>
-      <link>isprometheo.github.io/posts/38/</link>
+      <link>https://isprometheo.github.io/posts/38/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/38/</guid>
+      <guid>https://isprometheo.github.io/posts/38/</guid>
       <description>Fluentd에서 로그를 전송하는 부분을 수정한 이후로 잘 동작하고 있었지만 flush_interval을 5분으로 하여 실시간으로 로그를 볼 수가 없었다. 그리고 Fluentd 서버를 확인해 보니 로그 전송 버퍼가 많이 쌓여 있었다. 그래서</description>
     </item>
     
     <item>
       <title>[Log] Fluentd Kafka 지연 해결</title>
-      <link>isprometheo.github.io/posts/28/</link>
+      <link>https://isprometheo.github.io/posts/28/</link>
       <pubDate>Thu, 12 Sep 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/28/</guid>
+      <guid>https://isprometheo.github.io/posts/28/</guid>
       <description>로그를 분석하기 위해 Fluentd, Kafka, ELK(Elastic Search, Logstash, Kibana)를 연동하여 사용하고 있는데 특정 토픽의 로그가 지연되고 있었다. 처음엔 Logstash에서 Elastic Search로 전송하여 인덱싱하는 게 느린 것으로 판단하여 Elastic Search의 설정을</description>
     </item>
     
     <item>
       <title>[Log] Fluentd Kafka Logstash 연동</title>
-      <link>isprometheo.github.io/posts/23/</link>
+      <link>https://isprometheo.github.io/posts/23/</link>
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/23/</guid>
+      <guid>https://isprometheo.github.io/posts/23/</guid>
       <description>ELK를 이용하여 로그 수집/분석을 하기 위해 Fluentd와 Kafka를 연동할 필요가 있었다. 그래서 Fluentd에서 Kafka로 로그를 전송할 수 있도록 설정을 추가했는데 Kafka가 죽어서(원인은 파악하지 못했다</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>logging on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/logging/</link>
+    <link>https://isprometheo.github.io/tags/logging/</link>
     <description>Recent content in logging on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 May 2015 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/logging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Python] Django logging</title>
-      <link>isprometheo.github.io/posts/5/</link>
+      <link>https://isprometheo.github.io/posts/5/</link>
       <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/5/</guid>
+      <guid>https://isprometheo.github.io/posts/5/</guid>
       <description>Django에서 로그를 남기려면 다음과 같이 하면 된다. settings.py에 다음을 추가한다. LOGGING = { &#39;version&#39;: 1, &#39;disable_existing_loggers&#39;: False, &#39;handlers&#39;: { &#39;file&#39;: { &#39;level&#39;: &#39;DEBUG&#39;, &#39;class&#39;: &#39;logging.FileHandler&#39;, &#39;filename&#39;: &#39;/path/to/log/debug.log&#39;, }, }, &#39;loggers&#39;: { &#39;django.request&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;: &#39;DEBUG&#39;, &#39;propagate&#39;: True, }, &#39;django.request&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;: &#39;DEBUG&#39;, &#39;propagate&#39;: True, }, ‘myproject&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;:</description>
     </item>
     

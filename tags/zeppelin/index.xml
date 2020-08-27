@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>zeppelin on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/zeppelin/</link>
+    <link>https://isprometheo.github.io/tags/zeppelin/</link>
     <description>Recent content in zeppelin on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/zeppelin/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/zeppelin/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Log] Zeppelin 크론 설정하기</title>
-      <link>isprometheo.github.io/posts/75/</link>
+      <link>https://isprometheo.github.io/posts/75/</link>
       <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/75/</guid>
+      <guid>https://isprometheo.github.io/posts/75/</guid>
       <description>이번에 프로젝트를 수행하면서 일별로 데이터를 분석할 필요가 있었다. 처음엔 수동으로 작업을 했는데 자동으로 구동되면 좋을 것 같아서 찾아보니 역시나 기능이 있었다. $ZEPPELIN_HOME/conf/zeppelin-site.xml 에서 주석으로 돼있는 내용을 풀고 다음과 같이 수정하면 된다. (zeppelin.notebook.cron.folders 에</description>
     </item>
     
     <item>
       <title>[Log] Zeppelin 설치 및 Spark 연동</title>
-      <link>isprometheo.github.io/posts/52/</link>
+      <link>https://isprometheo.github.io/posts/52/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/52/</guid>
+      <guid>https://isprometheo.github.io/posts/52/</guid>
       <description>Zeppelin은 웹 기반으로 다양한 인터프리터를 이용해서 데이터 분석을 도와주는 도구이다. 설치를 위해서 다음과 같이 하면 된다. $ sudo yum install -y java-1.8.0-openjdk.x86_64 $ wget http://mirror.apache-kr.org/zeppelin/zeppelin-0.8.2/zeppelin-0.8.2-bin-all.tgz $ tar xf zeppelin-0.8.2-bin-all.tgz &amp;amp;&amp;amp; cd zeppelin-0.8.2-bin-all 다음과 같이 실행하면 Zeppelin이 구동된다. $ bin/zeppelin-daemon.sh start</description>
     </item>
     

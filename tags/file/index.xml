@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>file on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/file/</link>
+    <link>https://isprometheo.github.io/tags/file/</link>
     <description>Recent content in file on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/file/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/file/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Golang] Echo 파일 업로더 서버 구축</title>
-      <link>isprometheo.github.io/posts/72/</link>
+      <link>https://isprometheo.github.io/posts/72/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/72/</guid>
+      <guid>https://isprometheo.github.io/posts/72/</guid>
       <description>echo 프레임워크로 파일 업로더 서버를 구축했다. 쿡북에서 단일 파일, 여러 파일을 업로드하는 예제가 있어 이를 바탕으로 쉽게 만들 수 있었다. 하지만 업로드를 하는 클라이언트에서 폼의 키값을 다른 것으로 하는 경우를 고려해야 했다. 그래서</description>
     </item>
     

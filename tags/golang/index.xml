@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/golang/</link>
+    <link>https://isprometheo.github.io/tags/golang/</link>
     <description>Recent content in golang on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Golang] too many open files 에러 해결</title>
-      <link>isprometheo.github.io/posts/73/</link>
+      <link>https://isprometheo.github.io/posts/73/</link>
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/73/</guid>
+      <guid>https://isprometheo.github.io/posts/73/</guid>
       <description>Go 프로젝트에서 http 클라이언트를 만들어서 활용하고 있었는데 어느 날 서버에 응답이 없었다. 그래서 서버에 들어가서 확인해보니 too many open files라는 에러가 나고 있었다. netstat으로 확인해보니 CLOSE_WAIT 상태로 많이 쌓여 있었다. 어</description>
     </item>
     
     <item>
       <title>[Golang] Echo 파일 업로더 서버 구축</title>
-      <link>isprometheo.github.io/posts/72/</link>
+      <link>https://isprometheo.github.io/posts/72/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/72/</guid>
+      <guid>https://isprometheo.github.io/posts/72/</guid>
       <description>echo 프레임워크로 파일 업로더 서버를 구축했다. 쿡북에서 단일 파일, 여러 파일을 업로드하는 예제가 있어 이를 바탕으로 쉽게 만들 수 있었다. 하지만 업로드를 하는 클라이언트에서 폼의 키값을 다른 것으로 하는 경우를 고려해야 했다. 그래서</description>
     </item>
     
     <item>
       <title>[Golang] 커맨드 명령 동시 실행 및 디렉토리 제거</title>
-      <link>isprometheo.github.io/posts/68/</link>
+      <link>https://isprometheo.github.io/posts/68/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/68/</guid>
+      <guid>https://isprometheo.github.io/posts/68/</guid>
       <description>신규 서버를 만들면서 두가지 기능이 필요했다. 첫째는 명령어를 동시에 실행해서 속도를 높이는 것과 데이터가 있는 디렉토리를 제거하는 것이었다. 명령어 동시 실행하기 Golang에서 WaitGroup은 모든 goroutine</description>
     </item>
     
     <item>
       <title>[Golang] Go의 선(The Zen of Go)</title>
-      <link>isprometheo.github.io/posts/64/</link>
+      <link>https://isprometheo.github.io/posts/64/</link>
       <pubDate>Thu, 04 Jun 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/64/</guid>
+      <guid>https://isprometheo.github.io/posts/64/</guid>
       <description>1. 각 패키지는 단일 목적을 수행하라 2. 명시적으로 에러를 다뤄라 3. 깊게 중첩하는 것보다 빠르게 반환하라 4. 호출자에게 동시성을 맡겨라 5. goroutine을 실행하기 전, 언제 멈출지 알라 6. 패키지 수준의 상태를 피하라 7. 단순함은 중</description>
     </item>
     
     <item>
       <title>[Golang] Kafka 연동 문제</title>
-      <link>isprometheo.github.io/posts/59/</link>
+      <link>https://isprometheo.github.io/posts/59/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/59/</guid>
+      <guid>https://isprometheo.github.io/posts/59/</guid>
       <description>Go로 만든 프로젝트에서 kafka 연동하여 로그를 수집하는데 confluent-kafka-go를 사용하고 있었다. package main import ( &amp;quot;fmt&amp;quot; &amp;quot;github.com/confluentinc/confluent-kafka-go/kafka&amp;quot; ) var kafkaClient *kafka.Producer func main() { kafkaClient, _ = kafka.NewProducer(&amp;amp;kafka.ConfigMap{ &amp;quot;bootstrap.servers&amp;quot;: &amp;quot;broker:9092&amp;quot;, &amp;quot;acks&amp;quot;: 1, }) go func() { for e := range p.Events() { switch ev := e.(type) { case *kafka.Message: m := ev if m.TopicPartition.Error != nil { fmt.Printf(&amp;quot;Delivery failed: %v,</description>
     </item>
     
     <item>
       <title>[Golang] Go를 사용하면서 발생했던 문제들</title>
-      <link>isprometheo.github.io/posts/58/</link>
+      <link>https://isprometheo.github.io/posts/58/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/58/</guid>
+      <guid>https://isprometheo.github.io/posts/58/</guid>
       <description>테스트 타임아웃 Go로 테스트를 하는데 다음과 같은 에러가 발생하면서 종료됐다. golang panic: test timed out after 10m0s 이유는 테스트를 수행할 때 기본으로 10분으로 타임아웃이 걸려있었기 때문이었다. $ go test -timeout 1h 위와 같이 타임아웃 시간을 늘려서 수행하</description>
     </item>
     
     <item>
       <title>[Log] librdkafka 빌드하기</title>
-      <link>isprometheo.github.io/posts/55/</link>
+      <link>https://isprometheo.github.io/posts/55/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/55/</guid>
+      <guid>https://isprometheo.github.io/posts/55/</guid>
       <description>golang 프로젝트의 로그를 수집하기 위해 confluent-kafka-go를 이용했다. 이를 위해서 librdkafka를 설치해야 하는데 confluent-kafka-go 최신 버전의 경우 1.3.0 이상을 사용해야 한다는 에러가 났다. CeontOS 7에서 yum으로 설치하는</description>
     </item>
     
     <item>
       <title>[Golang] Java gzip migration</title>
-      <link>isprometheo.github.io/posts/47/</link>
+      <link>https://isprometheo.github.io/posts/47/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/47/</guid>
+      <guid>https://isprometheo.github.io/posts/47/</guid>
       <description>기존에 Java로 만들어진 프로젝트를 Golang으로 다시 만들고 있는데 문자열을 gzip으로 압축한 뒤 base64로 인코딩한 결과를 파일명으로 만드는 로직이 있었다. 처음엔 Golang에서도 gzip과 base64가</description>
     </item>
     
     <item>
       <title>[Golang] 410 Gone</title>
-      <link>isprometheo.github.io/posts/41/</link>
+      <link>https://isprometheo.github.io/posts/41/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/41/</guid>
+      <guid>https://isprometheo.github.io/posts/41/</guid>
       <description>Golang을 1.13으로 업그레이드를 하고 프로젝트에서 go get ...으로 라이브러리를 다운받으려고 했는데 410 Gone 에러를 내면서 실행이 되지 않았다. 구글에서 검색을 해보니 해결 방법을 바로 찾을 수 있었다. $ export GO111MODULE=on $ export GOPROXY=direct $ export GOSUMDB=off 원</description>
     </item>
     
     <item>
       <title>[Golang] Echo 415 에러 해결</title>
-      <link>isprometheo.github.io/posts/30/</link>
+      <link>https://isprometheo.github.io/posts/30/</link>
       <pubDate>Thu, 03 Oct 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/30/</guid>
+      <guid>https://isprometheo.github.io/posts/30/</guid>
       <description>Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있</description>
     </item>
     
     <item>
       <title>[Golang] TCP Client Reconnect</title>
-      <link>isprometheo.github.io/posts/24/</link>
+      <link>https://isprometheo.github.io/posts/24/</link>
       <pubDate>Thu, 15 Aug 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/24/</guid>
+      <guid>https://isprometheo.github.io/posts/24/</guid>
       <description>go로 개발을 하다가 TCP 통신을 해야 했는데 서버와 연결이 끊어지면 다시 시도를 하는 기능이 필요했다. go가 아직은 익숙치않아 어떻게 구현해야 하는지 난감했지만 열심히 구글링해서 찾았다. 채널을 통해서 하는 방법도 있고 다른 방법들도</description>
     </item>
     

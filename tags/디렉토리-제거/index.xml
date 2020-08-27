@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>디렉토리 제거 on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0/</link>
+    <link>https://isprometheo.github.io/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0/</link>
     <description>Recent content in 디렉토리 제거 on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 02 Jul 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Golang] 커맨드 명령 동시 실행 및 디렉토리 제거</title>
-      <link>isprometheo.github.io/posts/68/</link>
+      <link>https://isprometheo.github.io/posts/68/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/68/</guid>
+      <guid>https://isprometheo.github.io/posts/68/</guid>
       <description>신규 서버를 만들면서 두가지 기능이 필요했다. 첫째는 명령어를 동시에 실행해서 속도를 높이는 것과 데이터가 있는 디렉토리를 제거하는 것이었다. 명령어 동시 실행하기 Golang에서 WaitGroup은 모든 goroutine</description>
     </item>
     

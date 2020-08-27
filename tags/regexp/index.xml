@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>regexp on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/regexp/</link>
+    <link>https://isprometheo.github.io/tags/regexp/</link>
     <description>Recent content in regexp on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 21 Nov 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[JS] RegExp 재사용할 때 문제 해결</title>
-      <link>isprometheo.github.io/posts/37/</link>
+      <link>https://isprometheo.github.io/posts/37/</link>
       <pubDate>Thu, 21 Nov 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/37/</guid>
+      <guid>https://isprometheo.github.io/posts/37/</guid>
       <description>Javascript에서 정규식을 사용하는 경우가 자주 있는데 그때마다 잊어버리는 게 있다. 반복해서 정규식을 이용해 문자열을 찾는 경우가 있는데 항상 2번째에서는 다음과 같이 값이 나오지 않는 경우가 발생했다 let re = /ab/g; let str = &#39;abc&#39; re.exec(str)</description>
     </item>
     

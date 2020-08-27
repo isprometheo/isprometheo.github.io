@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>정책위반 on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/%EC%A0%95%EC%B1%85%EC%9C%84%EB%B0%98/</link>
+    <link>https://isprometheo.github.io/tags/%EC%A0%95%EC%B1%85%EC%9C%84%EB%B0%98/</link>
     <description>Recent content in 정책위반 on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/%EC%A0%95%EC%B1%85%EC%9C%84%EB%B0%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/%EC%A0%95%EC%B1%85%EC%9C%84%EB%B0%98/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리(3)</title>
-      <link>isprometheo.github.io/posts/71/</link>
+      <link>https://isprometheo.github.io/posts/71/</link>
       <pubDate>Thu, 23 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/71/</guid>
+      <guid>https://isprometheo.github.io/posts/71/</guid>
       <description>저번에 해결이 된 줄 알고 좋아했지만 곧 정책 위반으로 삭제가 됐다. 이번엔 확실히 해결하기 위해 더 가열차게 검색을 하여 찾아봤다. React Native의 라이프 사이클을 다시 한번 확인했다. 앱이 로딩되는 중에 광고를 가져오면 안된다고 하여</description>
     </item>
     
     <item>
       <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리(2)</title>
-      <link>isprometheo.github.io/posts/69/</link>
+      <link>https://isprometheo.github.io/posts/69/</link>
       <pubDate>Thu, 09 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/69/</guid>
+      <guid>https://isprometheo.github.io/posts/69/</guid>
       <description>또 앱이 삭제됐다. 이번에도 &amp;ldquo;앱, 타사 광고, 기기 기능 방해 정책 위반 처리&amp;quot;로 인해 삭제됐다. 그래서 앱 시작과 동시에 전면 광고가 나오지 않도록 했다. 대신에 아이콘은 클릭했을 때 전면 광고가 노출되도록 변경</description>
     </item>
     
     <item>
       <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리</title>
-      <link>isprometheo.github.io/posts/67/</link>
+      <link>https://isprometheo.github.io/posts/67/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/67/</guid>
+      <guid>https://isprometheo.github.io/posts/67/</guid>
       <description>갑작스럽게 앱이 삭제됐다. &amp;ldquo;앱, 타사 광고, 기기 기능 방해 정책 위반 처리&amp;rdquo; 으로 검색을 해봤다. 여러 가지 많은 결과들이 있었지만 같은 경우가 잘 없어 어떻게 대처해야할지 몰랐다. 메타 데이타나 정책 설정 문</description>
     </item>
     
     <item>
       <title>[PlayStore] 구글 플레이스토어 정책 위반 메일 대처 방법</title>
-      <link>isprometheo.github.io/posts/20/</link>
+      <link>https://isprometheo.github.io/posts/20/</link>
       <pubDate>Thu, 18 Jul 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/20/</guid>
+      <guid>https://isprometheo.github.io/posts/20/</guid>
       <description>앱을 올리고 한참이 지난 후 &amp;ldquo;정책 위반으로 Google Play에서 앱이 삭제되었습니다.&amp;ldquo;라는 내용의 메일을 받았다. 내용을 읽어보니 대강 무엇이 문제인지는 바로 알 수 있었다. 앱에서 애드몹(AdMob)과 애</description>
     </item>
     

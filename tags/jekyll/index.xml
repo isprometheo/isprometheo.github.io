@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jekyll on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/jekyll/</link>
+    <link>https://isprometheo.github.io/tags/jekyll/</link>
     <description>Recent content in jekyll on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 25 Jul 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Jekyll] minima 테마에 페이지 넣기</title>
-      <link>isprometheo.github.io/posts/21/</link>
+      <link>https://isprometheo.github.io/posts/21/</link>
       <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/21/</guid>
+      <guid>https://isprometheo.github.io/posts/21/</guid>
       <description>현재 블로그 테마로 minima를 사용하고 있는데 메인 페이지에 페이지네이션 기능이 없었다. 이를 위해 jekyll-paginate를 _config.yml과 Gemfile에 추가하면 된다. _config.yml 파일에 다음을 추가한다.</description>
     </item>
     

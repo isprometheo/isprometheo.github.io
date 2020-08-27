@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vue on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/vue/</link>
+    <link>https://isprometheo.github.io/tags/vue/</link>
     <description>Recent content in vue on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[JS] watch를 사용할 수 있는 컴포넌트 만들기</title>
-      <link>isprometheo.github.io/posts/36/</link>
+      <link>https://isprometheo.github.io/posts/36/</link>
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/36/</guid>
+      <guid>https://isprometheo.github.io/posts/36/</guid>
       <description>Vue로 된 프로젝트가 있는데 하나의 파일에서 화면을 전부 만들고 있었다. 각 부분들을 컴포넌트로 만드는데 자식 컴포넌트에 값을 넘겨 주면서 watch로 변경을 감지할 수 있도록 하는 기능이 필요했다. v-model을 사용하면 쉽게</description>
     </item>
     

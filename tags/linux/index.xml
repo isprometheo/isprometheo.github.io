@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/linux/</link>
+    <link>https://isprometheo.github.io/tags/linux/</link>
     <description>Recent content in linux on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Linux] 서버 장애 대응</title>
-      <link>isprometheo.github.io/posts/66/</link>
+      <link>https://isprometheo.github.io/posts/66/</link>
       <pubDate>Thu, 18 Jun 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/66/</guid>
+      <guid>https://isprometheo.github.io/posts/66/</guid>
       <description>서버에 특정 프로그램이 CPU를 과도하게 사용하여 이를 안정시킬 필요가 있었다. 이를 위해서 작업 중인 프로그램을 찾아서 우선 순위를 재조정하여 CPU 사용량을 낮출 수 있었다. $ ps -eo pid,nice,lstart,cmd | grep my_program | grep -v grep $ sudo renice -n 1 pid lstart는 시작</description>
     </item>
     
     <item>
       <title>[Linux] buff/cache 해제</title>
-      <link>isprometheo.github.io/posts/60/</link>
+      <link>https://isprometheo.github.io/posts/60/</link>
       <pubDate>Thu, 07 May 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/60/</guid>
+      <guid>https://isprometheo.github.io/posts/60/</guid>
       <description>서버에 메모리가 부족하다는 알람이 발생해서 살펴보니 실제 사용하는 메모리는 적었다. 그래서 다른 항목들을 보니 buff/cache에서 할당된 메모리가 80% 정도 사용하고 있었다. 구글에서 찾아보니 다음과 같이 하면 바로 해제할 수 있</description>
     </item>
     

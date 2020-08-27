@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>maven on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/maven/</link>
+    <link>https://isprometheo.github.io/tags/maven/</link>
     <description>Recent content in maven on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 09 Apr 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Java] Maven을 Gradle로 전환하기</title>
-      <link>isprometheo.github.io/posts/57/</link>
+      <link>https://isprometheo.github.io/posts/57/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/57/</guid>
+      <guid>https://isprometheo.github.io/posts/57/</guid>
       <description>Spring Boot 프로젝트를 빌드를 하기위해 maven을 사용했는데 시간이 많이 들었다. 평상시엔 별 탈 없이 사용했지만 긴급상황에서 빠르게 배포가 필요한 경우 너무 오래 걸려 빌드를 빠르게 하기 위해 Gradle로 전환할 필요를 느꼈다. 그래서</description>
     </item>
     

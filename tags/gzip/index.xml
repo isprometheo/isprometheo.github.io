@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gzip on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/gzip/</link>
+    <link>https://isprometheo.github.io/tags/gzip/</link>
     <description>Recent content in gzip on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/gzip/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/gzip/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Golang] Java gzip migration</title>
-      <link>isprometheo.github.io/posts/47/</link>
+      <link>https://isprometheo.github.io/posts/47/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/47/</guid>
+      <guid>https://isprometheo.github.io/posts/47/</guid>
       <description>기존에 Java로 만들어진 프로젝트를 Golang으로 다시 만들고 있는데 문자열을 gzip으로 압축한 뒤 base64로 인코딩한 결과를 파일명으로 만드는 로직이 있었다. 처음엔 Golang에서도 gzip과 base64가</description>
     </item>
     

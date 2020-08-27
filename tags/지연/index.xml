@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>지연 on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/%EC%A7%80%EC%97%B0/</link>
+    <link>https://isprometheo.github.io/tags/%EC%A7%80%EC%97%B0/</link>
     <description>Recent content in 지연 on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Sep 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/%EC%A7%80%EC%97%B0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/%EC%A7%80%EC%97%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Log] Fluentd Kafka 지연 해결</title>
-      <link>isprometheo.github.io/posts/28/</link>
+      <link>https://isprometheo.github.io/posts/28/</link>
       <pubDate>Thu, 12 Sep 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/28/</guid>
+      <guid>https://isprometheo.github.io/posts/28/</guid>
       <description>로그를 분석하기 위해 Fluentd, Kafka, ELK(Elastic Search, Logstash, Kibana)를 연동하여 사용하고 있는데 특정 토픽의 로그가 지연되고 있었다. 처음엔 Logstash에서 Elastic Search로 전송하여 인덱싱하는 게 느린 것으로 판단하여 Elastic Search의 설정을</description>
     </item>
     

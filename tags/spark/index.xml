@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>spark on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/spark/</link>
+    <link>https://isprometheo.github.io/tags/spark/</link>
     <description>Recent content in spark on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[Log] Airflow 설치</title>
-      <link>isprometheo.github.io/posts/53/</link>
+      <link>https://isprometheo.github.io/posts/53/</link>
       <pubDate>Thu, 12 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/53/</guid>
+      <guid>https://isprometheo.github.io/posts/53/</guid>
       <description>Spark에서 하는 일을 주기적으로 수행하기 위해 무엇이 있는지 조사했다. 여러 가지 도구들이 있었는데 그 중에서 Airflow와 Luigi가 좋아보였다. 둘 중에 어떤 걸로 정할 지 고민하다 Airflow로 정했다. 두 가지 모두</description>
     </item>
     
     <item>
       <title>[Log] Zeppelin 설치 및 Spark 연동</title>
-      <link>isprometheo.github.io/posts/52/</link>
+      <link>https://isprometheo.github.io/posts/52/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/52/</guid>
+      <guid>https://isprometheo.github.io/posts/52/</guid>
       <description>Zeppelin은 웹 기반으로 다양한 인터프리터를 이용해서 데이터 분석을 도와주는 도구이다. 설치를 위해서 다음과 같이 하면 된다. $ sudo yum install -y java-1.8.0-openjdk.x86_64 $ wget http://mirror.apache-kr.org/zeppelin/zeppelin-0.8.2/zeppelin-0.8.2-bin-all.tgz $ tar xf zeppelin-0.8.2-bin-all.tgz &amp;amp;&amp;amp; cd zeppelin-0.8.2-bin-all 다음과 같이 실행하면 Zeppelin이 구동된다. $ bin/zeppelin-daemon.sh start</description>
     </item>
     
     <item>
       <title>[Log] Spark ElasticSearch Parquet</title>
-      <link>isprometheo.github.io/posts/46/</link>
+      <link>https://isprometheo.github.io/posts/46/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/46/</guid>
+      <guid>https://isprometheo.github.io/posts/46/</guid>
       <description>로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>앱 빌드 on isprometheo의 블로그</title>
-    <link>isprometheo.github.io/tags/%EC%95%B1-%EB%B9%8C%EB%93%9C/</link>
+    <link>https://isprometheo.github.io/tags/%EC%95%B1-%EB%B9%8C%EB%93%9C/</link>
     <description>Recent content in 앱 빌드 on isprometheo의 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 30 May 2019 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="isprometheo.github.io/tags/%EC%95%B1-%EB%B9%8C%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://isprometheo.github.io/tags/%EC%95%B1-%EB%B9%8C%EB%93%9C/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[React Native] 앱 빌드하기</title>
-      <link>isprometheo.github.io/posts/13/</link>
+      <link>https://isprometheo.github.io/posts/13/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0900</pubDate>
       
-      <guid>isprometheo.github.io/posts/13/</guid>
+      <guid>https://isprometheo.github.io/posts/13/</guid>
       <description>앱을 출시하기 위해서 빌드를 해야한다. keytool로 업로드 키를 생성한다. my-upload-key.keystore와 my-key-alias는 변경해도 된다. $ keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000 android/</description>
     </item>
     

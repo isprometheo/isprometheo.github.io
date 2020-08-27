@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>심플 소프트웨어 on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/%EC%8B%AC%ED%94%8C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/</link>
+    <description>Recent content in 심플 소프트웨어 on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Jan 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/%EC%8B%AC%ED%94%8C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(3)</title>
+      <link>isprometheo.github.io/posts/45/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/45/</guid>
+      <description>Part 6 소프트웨어 이해하기 컴퓨터란 무엇인가? 인간이 설정한 목표를 달성하기 위해 일련의 기호 명령을 수행하고 데이터를 비교할 수 있는 모든 물질 소프트웨어 구성 요소: 구조, 동작, 결과 소프트웨어 개정판:(I)SAR 구별하기 구조</description>
+    </item>
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(2)</title>
+      <link>isprometheo.github.io/posts/44/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/44/</guid>
+      <description>Part 3 단순성과 소프트웨어 설계 설계는 프로젝트 초반에 하라 미래를 고려하지 않으면 코드가 엉망으로 설계되고 너무 복잡해진다. 미래 예측의 정확성 미래 예측의 정확성은 시스템이 복잡해질수록, 예측하고자 하는 시점이 멀어질수록 낮아진</description>
+    </item>
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(1)</title>
+      <link>isprometheo.github.io/posts/43/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/43/</guid>
+      <description>페이스북에서 &amp;ldquo;심플 소프트웨어&amp;quot;라는 책이 나왔다고 해서 어떤 내용인지 궁금해서 읽어 보았다. 책 표지에 다음과 같은 문장이 눈길을 끌었다. 100년 뒤에도 유용할 소프트웨어 설계 원칙 &amp;amp; 프로그래머의 바른 길</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>get on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/get/</link>
+    <description>Recent content in get on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/get/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Golang] too many open files 에러 해결</title>
+      <link>isprometheo.github.io/posts/73/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/73/</guid>
+      <description>Go 프로젝트에서 http 클라이언트를 만들어서 활용하고 있었는데 어느 날 서버에 응답이 없었다. 그래서 서버에 들어가서 확인해보니 too many open files라는 에러가 나고 있었다. netstat으로 확인해보니 CLOSE_WAIT 상태로 많이 쌓여 있었다. 어</description>
+    </item>
+    
+  </channel>
+</rss>

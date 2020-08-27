@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>한글 on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/%ED%95%9C%EA%B8%80/</link>
+    <description>Recent content in 한글 on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/%ED%95%9C%EA%B8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Emacs] org-mode 한글 테이블</title>
+      <link>isprometheo.github.io/posts/7/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/7/</guid>
+      <description>Emacs org-mode에서 테이블을 만들 때 한글이 들어가는 경우 테이블이 깨지는 경우가 발생한다. 이는 영어와 한글의 사이즈가 달라서 발생하는 문제로 폰트 크기를 설정해주면 해결할 수 있다. (set-face-font &#39;default &amp;quot;Monaco-12&amp;quot;) (set-fontset-font &amp;quot;fontset-default&amp;quot; &#39;(#x1100 . #xffdc) &#39;(&amp;quot;AppleGothic&amp;quot; . &amp;quot;unicode-bmp&amp;quot;)) (setq face-font-rescale-alist &#39;((&amp;quot;AppleGothic&amp;quot; . 1.2))) 기본 폰</description>
+    </item>
+    
+  </channel>
+</rss>

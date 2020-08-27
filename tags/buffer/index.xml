@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>buffer on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/buffer/</link>
+    <description>Recent content in buffer on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 May 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/buffer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Linux] buff/cache 해제</title>
+      <link>isprometheo.github.io/posts/60/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/60/</guid>
+      <description>서버에 메모리가 부족하다는 알람이 발생해서 살펴보니 실제 사용하는 메모리는 적었다. 그래서 다른 항목들을 보니 buff/cache에서 할당된 메모리가 80% 정도 사용하고 있었다. 구글에서 찾아보니 다음과 같이 하면 바로 해제할 수 있</description>
+    </item>
+    
+  </channel>
+</rss>

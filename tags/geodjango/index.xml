@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>geodjango on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/geodjango/</link>
+    <description>Recent content in geodjango on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Jun 2015 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/geodjango/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Python] GeoDjango</title>
+      <link>isprometheo.github.io/posts/6/</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/6/</guid>
+      <description>Django에서 일정 거리내의 데이터를 조회하려면 다음과 같은 API를 사용하면되는데 데이터베이스에 따라 사용할 수 있는 것이 제한되어 있다. SpatiaLite를 이용하는 경우에 distance_gt, distance_gte, distance_lt, distance_lte는 사용 가</description>
+    </item>
+    
+  </channel>
+</rss>

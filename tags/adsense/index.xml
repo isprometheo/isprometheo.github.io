@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adsense on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/adsense/</link>
+    <description>Recent content in adsense on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Sep 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/adsense/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[AdSense] Google AdSense PIN 인증</title>
+      <link>isprometheo.github.io/posts/29/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/29/</guid>
+      <description>애드센스 페이지에 들어가보니 PIN 번호를 입력하라는 문구가 나왔다. 그래서 눌러보니 우편으로 발송한 PIN 번호를 입력하면 된다고 설명이 돼있었다. 2~4주 정도 걸린다고 설명이 돼있는데다가 추석도 있어서 더 걸릴 줄 알았는데 2주만에 왔</description>
+    </item>
+    
+  </channel>
+</rss>

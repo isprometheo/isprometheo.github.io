@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>admob on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/admob/</link>
+    <description>Recent content in admob on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/admob/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[AdMob] 정책 위반 해결</title>
+      <link>isprometheo.github.io/posts/35/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/35/</guid>
+      <description>AdMob에서 정책을 위반하고 있다는 메일을 받았다. 그래서 정책 센터에서 자세한 내용을 살펴보니 전면 광고의 문제였다. 기존의 전면 광고 노출 시점은 스플래시 화면 -&amp;gt; 콘텐츠 로드 -&amp;gt; 전면 광고 순이었다. 코드 상으로는 스플래시 화면 다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] AdMob 라이브러리 변경</title>
+      <link>isprometheo.github.io/posts/34/</link>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/34/</guid>
+      <description>기존에 사용하던 라이브러리로 AdMob 광고를 표시하고 있었는데 정책 위반 메일을 받아서 이를 처리할 필요가 있었다. 그래서 react-native-admob 저장소에서 문서를 읽어봤다. isReady 메소드로 처리가 가능하겠다는 생각이 들었다. 그러다 우연히 react-nat</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Admob 사용</title>
+      <link>isprometheo.github.io/posts/15/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/15/</guid>
+      <description>react-native로 만든 앱에 광고를 넣기 위해 react-native-admob을 사용했다.(안드로이드만 사용) $ npm i --save react-native-admob@next $ react-native link react-native-admob@next android/app/build.gradle에 다음을 추가한다.</description>
+    </item>
+    
+  </channel>
+</rss>

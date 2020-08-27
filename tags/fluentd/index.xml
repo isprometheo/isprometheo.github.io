@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fluentd on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/fluentd/</link>
+    <description>Recent content in fluentd on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/fluentd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Log] NoNodesAvailable 에러 해결</title>
+      <link>isprometheo.github.io/posts/51/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/51/</guid>
+      <description>다음과 같이 각 서버에 Fluentd를 설치해 수집하는 서버로 로그를 전송하고 Kafka를 일종의 버퍼로 하여 ELK 스택이나 다른 것들을 이용할 수 있도록 구성했다. 각 서버에서 tail로 로그 파일을 읽어서 forward로 송/수신</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd 성능 튜닝</title>
+      <link>isprometheo.github.io/posts/38/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/38/</guid>
+      <description>Fluentd에서 로그를 전송하는 부분을 수정한 이후로 잘 동작하고 있었지만 flush_interval을 5분으로 하여 실시간으로 로그를 볼 수가 없었다. 그리고 Fluentd 서버를 확인해 보니 로그 전송 버퍼가 많이 쌓여 있었다. 그래서</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd Kafka 지연 해결</title>
+      <link>isprometheo.github.io/posts/28/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/28/</guid>
+      <description>로그를 분석하기 위해 Fluentd, Kafka, ELK(Elastic Search, Logstash, Kibana)를 연동하여 사용하고 있는데 특정 토픽의 로그가 지연되고 있었다. 처음엔 Logstash에서 Elastic Search로 전송하여 인덱싱하는 게 느린 것으로 판단하여 Elastic Search의 설정을</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd Kafka Logstash 연동</title>
+      <link>isprometheo.github.io/posts/23/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/23/</guid>
+      <description>ELK를 이용하여 로그 수집/분석을 하기 위해 Fluentd와 Kafka를 연동할 필요가 있었다. 그래서 Fluentd에서 Kafka로 로그를 전송할 수 있도록 설정을 추가했는데 Kafka가 죽어서(원인은 파악하지 못했다</description>
+    </item>
+    
+  </channel>
+</rss>

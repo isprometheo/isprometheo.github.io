@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgresql on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/postgresql/</link>
+    <description>Recent content in postgresql on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Jul 2014 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[DB] Postgresql &#43; PostGIS</title>
+      <link>isprometheo.github.io/posts/2/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/2/</guid>
+      <description>Postgresql에서 위치 정보를 저장하기 위해 PostGIS를 이용한다. postgis를 사용하기 위해서 geos, proj.4를 먼저 설치한다. geos는 Geometry Engine - Open Source의 약어로 좌표 계산에 사용되며, proj.</description>
+    </item>
+    
+  </channel>
+</rss>

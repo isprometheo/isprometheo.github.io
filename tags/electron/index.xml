@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>electron on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/electron/</link>
+    <description>Recent content in electron on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Aug 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/electron/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[JS] Electron으로 앱 만들기</title>
+      <link>isprometheo.github.io/posts/74/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/74/</guid>
+      <description>ffmpeg을 이용하여 동영상을 인코딩하는 데스크톱 앱을 만들어야 했다. 빠르게 만들기 위해 GitHub에 있을까하고 검색해보니 역시나 있었다. 만드는 과정에서 추가로 필요했던 기능들은 다음과 같았다. 새로 고침 막기 메뉴 수정</description>
+    </item>
+    
+  </channel>
+</rss>

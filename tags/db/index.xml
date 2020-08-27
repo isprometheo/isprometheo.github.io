@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>db on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/db/</link>
+    <description>Recent content in db on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Mar 2015 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/db/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[DB] SQLite</title>
+      <link>isprometheo.github.io/posts/3/</link>
+      <pubDate>Fri, 27 Mar 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/3/</guid>
+      <description>SQLite는 사용되는 응용 프로그램에 내장되는 놀라운 라이브러리이다. 독립적이고 파일 기반 데이터베이스로써 SQLite는 프로세스 기반 관계형 데이터베이스(서버)와 비교해봤을 때 제약이 덜하고 쉽게 정렬된 모든 데이터를</description>
+    </item>
+    
+    <item>
+      <title>[DB] Postgresql &#43; PostGIS</title>
+      <link>isprometheo.github.io/posts/2/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/2/</guid>
+      <description>Postgresql에서 위치 정보를 저장하기 위해 PostGIS를 이용한다. postgis를 사용하기 위해서 geos, proj.4를 먼저 설치한다. geos는 Geometry Engine - Open Source의 약어로 좌표 계산에 사용되며, proj.</description>
+    </item>
+    
+  </channel>
+</rss>

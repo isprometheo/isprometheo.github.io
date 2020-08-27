@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/posts/</link>
+    <description>Recent content in Posts on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Aug 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Log] Zeppelin 크론 설정하기</title>
+      <link>isprometheo.github.io/posts/75/</link>
+      <pubDate>Thu, 27 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/75/</guid>
+      <description>이번에 프로젝트를 수행하면서 일별로 데이터를 분석할 필요가 있었다. 처음엔 수동으로 작업을 했는데 자동으로 구동되면 좋을 것 같아서 찾아보니 역시나 기능이 있었다. $ZEPPELIN_HOME/conf/zeppelin-site.xml 에서 주석으로 돼있는 내용을 풀고 다음과 같이 수정하면 된다. (zeppelin.notebook.cron.folders 에</description>
+    </item>
+    
+    <item>
+      <title>[JS] Electron으로 앱 만들기</title>
+      <link>isprometheo.github.io/posts/74/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/74/</guid>
+      <description>ffmpeg을 이용하여 동영상을 인코딩하는 데스크톱 앱을 만들어야 했다. 빠르게 만들기 위해 GitHub에 있을까하고 검색해보니 역시나 있었다. 만드는 과정에서 추가로 필요했던 기능들은 다음과 같았다. 새로 고침 막기 메뉴 수정</description>
+    </item>
+    
+    <item>
+      <title>[Golang] too many open files 에러 해결</title>
+      <link>isprometheo.github.io/posts/73/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/73/</guid>
+      <description>Go 프로젝트에서 http 클라이언트를 만들어서 활용하고 있었는데 어느 날 서버에 응답이 없었다. 그래서 서버에 들어가서 확인해보니 too many open files라는 에러가 나고 있었다. netstat으로 확인해보니 CLOSE_WAIT 상태로 많이 쌓여 있었다. 어</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Echo 파일 업로더 서버 구축</title>
+      <link>isprometheo.github.io/posts/72/</link>
+      <pubDate>Thu, 30 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/72/</guid>
+      <description>echo 프레임워크로 파일 업로더 서버를 구축했다. 쿡북에서 단일 파일, 여러 파일을 업로드하는 예제가 있어 이를 바탕으로 쉽게 만들 수 있었다. 하지만 업로드를 하는 클라이언트에서 폼의 키값을 다른 것으로 하는 경우를 고려해야 했다. 그래서</description>
+    </item>
+    
+    <item>
+      <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리(3)</title>
+      <link>isprometheo.github.io/posts/71/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/71/</guid>
+      <description>저번에 해결이 된 줄 알고 좋아했지만 곧 정책 위반으로 삭제가 됐다. 이번엔 확실히 해결하기 위해 더 가열차게 검색을 하여 찾아봤다. React Native의 라이프 사이클을 다시 한번 확인했다. 앱이 로딩되는 중에 광고를 가져오면 안된다고 하여</description>
+    </item>
+    
+    <item>
+      <title>[Ansible] ansible로 mediainfo ffmepeg 설치</title>
+      <link>isprometheo.github.io/posts/70/</link>
+      <pubDate>Thu, 16 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/70/</guid>
+      <description>서버를 구성하는데 mediainfo와 ffmpeg을 설치할 필요가 있었다. 설치할 서버가 적을 경우 하나씩 해도 되지만 서버가 많을 경우 일일이 하는 것이 어렵다. 이를 쉽게 하기 위해 자동화 도구 중에 하나인 Ansible을 사용했</description>
+    </item>
+    
+    <item>
+      <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리(2)</title>
+      <link>isprometheo.github.io/posts/69/</link>
+      <pubDate>Thu, 09 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/69/</guid>
+      <description>또 앱이 삭제됐다. 이번에도 &amp;ldquo;앱, 타사 광고, 기기 기능 방해 정책 위반 처리&amp;quot;로 인해 삭제됐다. 그래서 앱 시작과 동시에 전면 광고가 나오지 않도록 했다. 대신에 아이콘은 클릭했을 때 전면 광고가 노출되도록 변경</description>
+    </item>
+    
+    <item>
+      <title>[Golang] 커맨드 명령 동시 실행 및 디렉토리 제거</title>
+      <link>isprometheo.github.io/posts/68/</link>
+      <pubDate>Thu, 02 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/68/</guid>
+      <description>신규 서버를 만들면서 두가지 기능이 필요했다. 첫째는 명령어를 동시에 실행해서 속도를 높이는 것과 데이터가 있는 디렉토리를 제거하는 것이었다. 명령어 동시 실행하기 Golang에서 WaitGroup은 모든 goroutine</description>
+    </item>
+    
+    <item>
+      <title>[PlayStore] 앱, 타사 광고, 기기 기능 방해 정책 위반 처리</title>
+      <link>isprometheo.github.io/posts/67/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/67/</guid>
+      <description>갑작스럽게 앱이 삭제됐다. &amp;ldquo;앱, 타사 광고, 기기 기능 방해 정책 위반 처리&amp;rdquo; 으로 검색을 해봤다. 여러 가지 많은 결과들이 있었지만 같은 경우가 잘 없어 어떻게 대처해야할지 몰랐다. 메타 데이타나 정책 설정 문</description>
+    </item>
+    
+    <item>
+      <title>[Linux] 서버 장애 대응</title>
+      <link>isprometheo.github.io/posts/66/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/66/</guid>
+      <description>서버에 특정 프로그램이 CPU를 과도하게 사용하여 이를 안정시킬 필요가 있었다. 이를 위해서 작업 중인 프로그램을 찾아서 우선 순위를 재조정하여 CPU 사용량을 낮출 수 있었다. $ ps -eo pid,nice,lstart,cmd | grep my_program | grep -v grep $ sudo renice -n 1 pid lstart는 시작</description>
+    </item>
+    
+    <item>
+      <title>[Chrome] 크롬 확장 프로그램 웹스토어에 등록하기</title>
+      <link>isprometheo.github.io/posts/65/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/65/</guid>
+      <description>특정 기능을 위해 크롬 확장 프로그램을 제작하여 등록해야 했다. 확장 프로그램을 등록하는 방법은 검색을 하면 어떻게 하는지 나와서 쉽게 할 수 있었다. 하지만 처음 등록을 해보는 거라 그런지 다음과 같은 이유로 거부당했다. &#39;스팸 및 스토어</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Go의 선(The Zen of Go)</title>
+      <link>isprometheo.github.io/posts/64/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/64/</guid>
+      <description>1. 각 패키지는 단일 목적을 수행하라 2. 명시적으로 에러를 다뤄라 3. 깊게 중첩하는 것보다 빠르게 반환하라 4. 호출자에게 동시성을 맡겨라 5. goroutine을 실행하기 전, 언제 멈출지 알라 6. 패키지 수준의 상태를 피하라 7. 단순함은 중</description>
+    </item>
+    
+    <item>
+      <title>[Log] ElasticSearch _default_ mapping 문제 해결</title>
+      <link>isprometheo.github.io/posts/63/</link>
+      <pubDate>Thu, 28 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/63/</guid>
+      <description>ElasticSearch에서 다음과 같은 로그가 발생했었다. [WARN ][o.e.d.i.m.MapperService ] [_default_] mapping is deprecated since it is not useful anymore now that indexes cannot have more than one type 이 로그는 _default_ mapping을 사용해서 발생하는 문제로 6.0.0 부터 Deprecated 되어 실제 적용된 매핑 타입으로 적용하면 된다. 그</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] magithub 사용하기</title>
+      <link>isprometheo.github.io/posts/62/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/62/</guid>
+      <description>Emacs에서 magit을 사용하여 github를 이용하고 있는데 github의 다른 기능들도 사용하고 싶어졌다. 특히 이슈를 등록하거나 보는 것을 하고 싶어 찾아보니 magithub라는 것이 있었다. .authinfo</description>
+    </item>
+    
+    <item>
+      <title>[Docker] Gnuboard 이미지 만들기</title>
+      <link>isprometheo.github.io/posts/61/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/61/</guid>
+      <description>간단한 홈페이지를 구축해야할 필요가 있었는데 Gnuboard를 Docker 이미지로 만들어서 헤로쿠에 배포하고 싶었다. 그래서 기존에 만들어진 것이 있는지 찾아보니 꽤 예전 버전이라 수정이 필요했다. Dockerfile은 다음과 같이</description>
+    </item>
+    
+    <item>
+      <title>[Linux] buff/cache 해제</title>
+      <link>isprometheo.github.io/posts/60/</link>
+      <pubDate>Thu, 07 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/60/</guid>
+      <description>서버에 메모리가 부족하다는 알람이 발생해서 살펴보니 실제 사용하는 메모리는 적었다. 그래서 다른 항목들을 보니 buff/cache에서 할당된 메모리가 80% 정도 사용하고 있었다. 구글에서 찾아보니 다음과 같이 하면 바로 해제할 수 있</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Kafka 연동 문제</title>
+      <link>isprometheo.github.io/posts/59/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/59/</guid>
+      <description>Go로 만든 프로젝트에서 kafka 연동하여 로그를 수집하는데 confluent-kafka-go를 사용하고 있었다. package main import ( &amp;quot;fmt&amp;quot; &amp;quot;github.com/confluentinc/confluent-kafka-go/kafka&amp;quot; ) var kafkaClient *kafka.Producer func main() { kafkaClient, _ = kafka.NewProducer(&amp;amp;kafka.ConfigMap{ &amp;quot;bootstrap.servers&amp;quot;: &amp;quot;broker:9092&amp;quot;, &amp;quot;acks&amp;quot;: 1, }) go func() { for e := range p.Events() { switch ev := e.(type) { case *kafka.Message: m := ev if m.TopicPartition.Error != nil { fmt.Printf(&amp;quot;Delivery failed: %v,</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Go를 사용하면서 발생했던 문제들</title>
+      <link>isprometheo.github.io/posts/58/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/58/</guid>
+      <description>테스트 타임아웃 Go로 테스트를 하는데 다음과 같은 에러가 발생하면서 종료됐다. golang panic: test timed out after 10m0s 이유는 테스트를 수행할 때 기본으로 10분으로 타임아웃이 걸려있었기 때문이었다. $ go test -timeout 1h 위와 같이 타임아웃 시간을 늘려서 수행하</description>
+    </item>
+    
+    <item>
+      <title>[Java] Maven을 Gradle로 전환하기</title>
+      <link>isprometheo.github.io/posts/57/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/57/</guid>
+      <description>Spring Boot 프로젝트를 빌드를 하기위해 maven을 사용했는데 시간이 많이 들었다. 평상시엔 별 탈 없이 사용했지만 긴급상황에서 빠르게 배포가 필요한 경우 너무 오래 걸려 빌드를 빠르게 하기 위해 Gradle로 전환할 필요를 느꼈다. 그래서</description>
+    </item>
+    
+    <item>
+      <title>[Log] HDFS Web UI Permission denied</title>
+      <link>isprometheo.github.io/posts/56/</link>
+      <pubDate>Thu, 02 Apr 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/56/</guid>
+      <description>HADOOP을 설치하고 웹에서 파일을 추가하거나 삭제할 수 있는데 다음과 같은 에러가 나면서 되지 않았다. Permission denied: user=dr.who, access=WRITE, inode=&amp;quot;/path/to/file&amp;quot;:current_user:supergroup:drwxr-xr-x 현재 HADOOP이 실행되고 있는 환경의 사용자 권한이 추가되지 않아 생기는 에러로 etc/hadoop/co</description>
+    </item>
+    
+    <item>
+      <title>[Log] librdkafka 빌드하기</title>
+      <link>isprometheo.github.io/posts/55/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/55/</guid>
+      <description>golang 프로젝트의 로그를 수집하기 위해 confluent-kafka-go를 이용했다. 이를 위해서 librdkafka를 설치해야 하는데 confluent-kafka-go 최신 버전의 경우 1.3.0 이상을 사용해야 한다는 에러가 났다. CeontOS 7에서 yum으로 설치하는</description>
+    </item>
+    
+    <item>
+      <title>[Log] Logstash 403 에러 해결</title>
+      <link>isprometheo.github.io/posts/54/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/54/</guid>
+      <description>ELK를 구성하여 로그를 잘 쌓고 있었는데 어느 날 로그가 수집되고 있지 않았다. 원인을 찾기 위해 Logstash의 로그(/var/log/logstash/logstash-plain.log)를 열어봤다. [INFO ][logstash.outputs.elasticsearch] retrying failed</description>
+    </item>
+    
+    <item>
+      <title>[Log] Airflow 설치</title>
+      <link>isprometheo.github.io/posts/53/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/53/</guid>
+      <description>Spark에서 하는 일을 주기적으로 수행하기 위해 무엇이 있는지 조사했다. 여러 가지 도구들이 있었는데 그 중에서 Airflow와 Luigi가 좋아보였다. 둘 중에 어떤 걸로 정할 지 고민하다 Airflow로 정했다. 두 가지 모두</description>
+    </item>
+    
+    <item>
+      <title>[Log] Zeppelin 설치 및 Spark 연동</title>
+      <link>isprometheo.github.io/posts/52/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/52/</guid>
+      <description>Zeppelin은 웹 기반으로 다양한 인터프리터를 이용해서 데이터 분석을 도와주는 도구이다. 설치를 위해서 다음과 같이 하면 된다. $ sudo yum install -y java-1.8.0-openjdk.x86_64 $ wget http://mirror.apache-kr.org/zeppelin/zeppelin-0.8.2/zeppelin-0.8.2-bin-all.tgz $ tar xf zeppelin-0.8.2-bin-all.tgz &amp;amp;&amp;amp; cd zeppelin-0.8.2-bin-all 다음과 같이 실행하면 Zeppelin이 구동된다. $ bin/zeppelin-daemon.sh start</description>
+    </item>
+    
+    <item>
+      <title>[Log] NoNodesAvailable 에러 해결</title>
+      <link>isprometheo.github.io/posts/51/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/51/</guid>
+      <description>다음과 같이 각 서버에 Fluentd를 설치해 수집하는 서버로 로그를 전송하고 Kafka를 일종의 버퍼로 하여 ELK 스택이나 다른 것들을 이용할 수 있도록 구성했다. 각 서버에서 tail로 로그 파일을 읽어서 forward로 송/수신</description>
+    </item>
+    
+    <item>
+      <title>[React Native] SQLite 사용하기</title>
+      <link>isprometheo.github.io/posts/50/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/50/</guid>
+      <description>React Native 버전을 0.59에서 0.61로 업데이트하면서 Hermes를 사용해보기로 했다. Hermes 설정을 완료하고 앱을 구동했으나 다음과 같은 에러가 발생했다. RangeError: Maximum call stack size exceeded, js engine:hermes 릴리스 버전으로 빌드를 시도해봤지만 메모리 문제로 빌드가</description>
+    </item>
+    
+    <item>
+      <title>[JS] PWA 만들기</title>
+      <link>isprometheo.github.io/posts/49/</link>
+      <pubDate>Thu, 13 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/49/</guid>
+      <description>mp3 파일들을 연속으로 재생할 수 있는 웹페이지를 만들었다. 처음엔 단순하게 audio 태그를 이용하여 재생했다. 데스크톱에서 확인했을 때 잘 동작해서 문제가 없다고 생각했다. 그런데 모바일에서 확인해보니 처음 재생은 화면이 꺼져도 끝까지 잘</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] macOS Catalina 디렉토리 접근 문제 해결</title>
+      <link>isprometheo.github.io/posts/48/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/48/</guid>
+      <description>시스템 환경설정 &amp;gt; 개인 정보 보호 &amp;gt; 전체 디스크 접근 권한에 Emacs 앱을 추가했지만 홈 디렉토리를 제외한 문서, 다운로드 등의 디렉토리 접근이 불가능했다. 이유는 Emacs가 ruby로 실행되기 때문이었다. 전체 디스크 접근 권한에 /u</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Java gzip migration</title>
+      <link>isprometheo.github.io/posts/47/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/47/</guid>
+      <description>기존에 Java로 만들어진 프로젝트를 Golang으로 다시 만들고 있는데 문자열을 gzip으로 압축한 뒤 base64로 인코딩한 결과를 파일명으로 만드는 로직이 있었다. 처음엔 Golang에서도 gzip과 base64가</description>
+    </item>
+    
+    <item>
+      <title>[Log] Spark ElasticSearch Parquet</title>
+      <link>isprometheo.github.io/posts/46/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/46/</guid>
+      <description>로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년</description>
+    </item>
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(3)</title>
+      <link>isprometheo.github.io/posts/45/</link>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/45/</guid>
+      <description>Part 6 소프트웨어 이해하기 컴퓨터란 무엇인가? 인간이 설정한 목표를 달성하기 위해 일련의 기호 명령을 수행하고 데이터를 비교할 수 있는 모든 물질 소프트웨어 구성 요소: 구조, 동작, 결과 소프트웨어 개정판:(I)SAR 구별하기 구조</description>
+    </item>
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(2)</title>
+      <link>isprometheo.github.io/posts/44/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/44/</guid>
+      <description>Part 3 단순성과 소프트웨어 설계 설계는 프로젝트 초반에 하라 미래를 고려하지 않으면 코드가 엉망으로 설계되고 너무 복잡해진다. 미래 예측의 정확성 미래 예측의 정확성은 시스템이 복잡해질수록, 예측하고자 하는 시점이 멀어질수록 낮아진</description>
+    </item>
+    
+    <item>
+      <title>[독서] 심플 소프트웨어를 읽고(1)</title>
+      <link>isprometheo.github.io/posts/43/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/43/</guid>
+      <description>페이스북에서 &amp;ldquo;심플 소프트웨어&amp;quot;라는 책이 나왔다고 해서 어떤 내용인지 궁금해서 읽어 보았다. 책 표지에 다음과 같은 문장이 눈길을 끌었다. 100년 뒤에도 유용할 소프트웨어 설계 원칙 &amp;amp; 프로그래머의 바른 길</description>
+    </item>
+    
+    <item>
+      <title>[JS] ejs SyntaxError</title>
+      <link>isprometheo.github.io/posts/42/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/42/</guid>
+      <description>ejs를 2에서 3으로 업그레이드하고 나서 다음과 같은 에러가 발생했다. SyntaxError: Unexpected identifier in index.ejs while compiling ejs If the above error is not helpful, you may want to try EJS-Lint: https://github.com/RyanZim/EJS-Lint Or, if you meant to create an async function, pass `async: true` as an option. at new Function (&amp;lt;anonymous&amp;gt;) ... 에러 로그에서 어디에서 잘못됐는지 정확히 나오지도 않고 로그</description>
+    </item>
+    
+    <item>
+      <title>[Golang] 410 Gone</title>
+      <link>isprometheo.github.io/posts/41/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/41/</guid>
+      <description>Golang을 1.13으로 업그레이드를 하고 프로젝트에서 go get ...으로 라이브러리를 다운받으려고 했는데 410 Gone 에러를 내면서 실행이 되지 않았다. 구글에서 검색을 해보니 해결 방법을 바로 찾을 수 있었다. $ export GO111MODULE=on $ export GOPROXY=direct $ export GOSUMDB=off 원</description>
+    </item>
+    
+    <item>
+      <title>[Log] Logstash Kafka 연동 에러 해결</title>
+      <link>isprometheo.github.io/posts/40/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/40/</guid>
+      <description>Lostash에서 input으로 kafka를 사용하고 있었는데 다음과 같은 오류가 나왔다. [WARN ][org.apache.kafka.common.utils.AppInfoParser] Error registering AppInfo mbean javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=logstash-1 at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:436) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1855) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:955) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320) ~[?:?] at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522) ~[?:?] 중복되는 설정들이 많아 합치면서 pipeline을 사용하도록 수정했는</description>
+    </item>
+    
+    <item>
+      <title>[Log] Logstash Pipeline 사용하기</title>
+      <link>isprometheo.github.io/posts/39/</link>
+      <pubDate>Thu, 05 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/39/</guid>
+      <description>Logstash에서 pipeline으로 개별로 설정을 하여 로그를 수집할 수 있다. 그래서 input, filter, output으로 나누어 사용하기 위해 다음과 같이 디렉토리를 구분하여 pipelines.yml을 설정했다. - pipeline.id: input path.config: &amp;quot;/etc/path/to/input.conf&amp;quot; - pipeline.id:</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd 성능 튜닝</title>
+      <link>isprometheo.github.io/posts/38/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/38/</guid>
+      <description>Fluentd에서 로그를 전송하는 부분을 수정한 이후로 잘 동작하고 있었지만 flush_interval을 5분으로 하여 실시간으로 로그를 볼 수가 없었다. 그리고 Fluentd 서버를 확인해 보니 로그 전송 버퍼가 많이 쌓여 있었다. 그래서</description>
+    </item>
+    
+    <item>
+      <title>[JS] RegExp 재사용할 때 문제 해결</title>
+      <link>isprometheo.github.io/posts/37/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/37/</guid>
+      <description>Javascript에서 정규식을 사용하는 경우가 자주 있는데 그때마다 잊어버리는 게 있다. 반복해서 정규식을 이용해 문자열을 찾는 경우가 있는데 항상 2번째에서는 다음과 같이 값이 나오지 않는 경우가 발생했다 let re = /ab/g; let str = &#39;abc&#39; re.exec(str)</description>
+    </item>
+    
+    <item>
+      <title>[JS] watch를 사용할 수 있는 컴포넌트 만들기</title>
+      <link>isprometheo.github.io/posts/36/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/36/</guid>
+      <description>Vue로 된 프로젝트가 있는데 하나의 파일에서 화면을 전부 만들고 있었다. 각 부분들을 컴포넌트로 만드는데 자식 컴포넌트에 값을 넘겨 주면서 watch로 변경을 감지할 수 있도록 하는 기능이 필요했다. v-model을 사용하면 쉽게</description>
+    </item>
+    
+    <item>
+      <title>[AdMob] 정책 위반 해결</title>
+      <link>isprometheo.github.io/posts/35/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/35/</guid>
+      <description>AdMob에서 정책을 위반하고 있다는 메일을 받았다. 그래서 정책 센터에서 자세한 내용을 살펴보니 전면 광고의 문제였다. 기존의 전면 광고 노출 시점은 스플래시 화면 -&amp;gt; 콘텐츠 로드 -&amp;gt; 전면 광고 순이었다. 코드 상으로는 스플래시 화면 다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] AdMob 라이브러리 변경</title>
+      <link>isprometheo.github.io/posts/34/</link>
+      <pubDate>Thu, 31 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/34/</guid>
+      <description>기존에 사용하던 라이브러리로 AdMob 광고를 표시하고 있었는데 정책 위반 메일을 받아서 이를 처리할 필요가 있었다. 그래서 react-native-admob 저장소에서 문서를 읽어봤다. isReady 메소드로 처리가 가능하겠다는 생각이 들었다. 그러다 우연히 react-nat</description>
+    </item>
+    
+    <item>
+      <title>[JS] Grunt Webpack 버전별로 빌드하기</title>
+      <link>isprometheo.github.io/posts/33/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/33/</guid>
+      <description>Javascript 라이브러리를 만든 후 버전별로 빌드할 필요가 생겼다. alpha/beta/release 이렇게 빌드를 하려고 했는데 생각처럼 되지 않아 시행착오를 여러 번 겪었다. Grunt와 Webpack을 사용하여 빌드하고 있는데 Webpack은 env 파라미터에서 버전 정</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] macOS Catalina 업그레이드 문제</title>
+      <link>isprometheo.github.io/posts/32/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/32/</guid>
+      <description>Sidecar 기능을 이용해보려고 Catalina로 업그레이드를 했다. 하지만 갖고 있는 기기인 iPad mini 4는 지원 대상이 아니었다. 그리고 Emacs도 사용하기가 살짝 까다로워졌다. 이유는 폴더 접근 권한 때문인데 Emacs에서 폴더 접근 권</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Reveal 추출 안되는 문제</title>
+      <link>isprometheo.github.io/posts/31/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/31/</guid>
+      <description>발표 자료를 만드는데 REVEAL.JS라는 라이브러리가 있어 활용해보고 싶었다. 처음부터 만들어야 하나 하다가 org-reveal이라는 Emacs 패키지를 찾았다. GitHub의 문서를 참고하여 발표 자료를 다 만들고 html로</description>
+    </item>
+    
+    <item>
+      <title>[Golang] Echo 415 에러 해결</title>
+      <link>isprometheo.github.io/posts/30/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/30/</guid>
+      <description>Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있</description>
+    </item>
+    
+    <item>
+      <title>[AdSense] Google AdSense PIN 인증</title>
+      <link>isprometheo.github.io/posts/29/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/29/</guid>
+      <description>애드센스 페이지에 들어가보니 PIN 번호를 입력하라는 문구가 나왔다. 그래서 눌러보니 우편으로 발송한 PIN 번호를 입력하면 된다고 설명이 돼있었다. 2~4주 정도 걸린다고 설명이 돼있는데다가 추석도 있어서 더 걸릴 줄 알았는데 2주만에 왔</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd Kafka 지연 해결</title>
+      <link>isprometheo.github.io/posts/28/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/28/</guid>
+      <description>로그를 분석하기 위해 Fluentd, Kafka, ELK(Elastic Search, Logstash, Kibana)를 연동하여 사용하고 있는데 특정 토픽의 로그가 지연되고 있었다. 처음엔 Logstash에서 Elastic Search로 전송하여 인덱싱하는 게 느린 것으로 판단하여 Elastic Search의 설정을</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] helm 화살표키 디렉토리 탐색</title>
+      <link>isprometheo.github.io/posts/27/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/27/</guid>
+      <description>Emacs에서 C-x C-f로 helm-find-files를 사용하고 있었는데 업데이트 이후에 디렉토리 및 파일을 탐색하는데 화살표키로 상위 디렉토리로 가거나 이전으로 돌아오지 않고 커서가 움직였다. 이전처럼 사용하기 위해 다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] AndroidX Migration</title>
+      <link>isprometheo.github.io/posts/26/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/26/</guid>
+      <description>Gradle 버전을 5로 올리고 빌드를 하니 react-native-admob, react-native-custom-tabs, react-native-smart-splash-screen 에서 다음과 같은 에러가 났다. error: package android.support.annotation does not exist import android.support.annotation.Nullable; ^ error: cannot find symbol import android.support.customtabs.CustomTabsIntent; ^ 이를 해결하려면 각각 다음과 같이 변경하면 된다. // import android.support.annotation.Nullable; import androidx.annotation.Nullable; // import android.support.customtabs.CustomTabsIntent; import androidx.browser.customtabs.CustomTabsIntent; 참고 문헌 https://developer.android.com/jetpack/androidx/migrate</description>
+    </item>
+    
+    <item>
+      <title>[React Native] 빌드 실패 해결(Firebase Analytics)</title>
+      <link>isprometheo.github.io/posts/25/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/25/</guid>
+      <description>앱을 빌드하는데 다음과 같은 에러가 발생했다. &amp;gt; Configure project :@react-native-firebase_analytics :@react-native-firebase_analytics:firebase.bom using default value: 21.1.0 FAILURE: Build failed with an exception. * Where: Build file &#39;../node_modules/@react-native-firebase/analytics/android/build.gradle&#39; line: 60 * What went wrong: A problem occurred evaluating project &#39;:@react-native-firebase_analytics&#39;. &amp;gt; Could not find method platform() for arguments [com.google.firebase:firebase-bom:21.1.0] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler. android/gradle/wrapper/gradle-wrap</description>
+    </item>
+    
+    <item>
+      <title>[Golang] TCP Client Reconnect</title>
+      <link>isprometheo.github.io/posts/24/</link>
+      <pubDate>Thu, 15 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/24/</guid>
+      <description>go로 개발을 하다가 TCP 통신을 해야 했는데 서버와 연결이 끊어지면 다시 시도를 하는 기능이 필요했다. go가 아직은 익숙치않아 어떻게 구현해야 하는지 난감했지만 열심히 구글링해서 찾았다. 채널을 통해서 하는 방법도 있고 다른 방법들도</description>
+    </item>
+    
+    <item>
+      <title>[Log] Fluentd Kafka Logstash 연동</title>
+      <link>isprometheo.github.io/posts/23/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/23/</guid>
+      <description>ELK를 이용하여 로그 수집/분석을 하기 위해 Fluentd와 Kafka를 연동할 필요가 있었다. 그래서 Fluentd에서 Kafka로 로그를 전송할 수 있도록 설정을 추가했는데 Kafka가 죽어서(원인은 파악하지 못했다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Async Storage 사용하기</title>
+      <link>isprometheo.github.io/posts/22/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/22/</guid>
+      <description>앱을 개발하다보니 설정된 내용을 저장할 필요가 있어 async-storage를 사용하게 되었다. React Native 버전이 0.59 이하인 경우 아래와 같이 하면 된다. 버전이 0.60 이상인 경우 link를 해주지 않아도 된다. $ npm install @react-native-community/async-storage $ react-native link @react-native-community/async-storage 데이터를</description>
+    </item>
+    
+    <item>
+      <title>[Jekyll] minima 테마에 페이지 넣기</title>
+      <link>isprometheo.github.io/posts/21/</link>
+      <pubDate>Thu, 25 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/21/</guid>
+      <description>현재 블로그 테마로 minima를 사용하고 있는데 메인 페이지에 페이지네이션 기능이 없었다. 이를 위해 jekyll-paginate를 _config.yml과 Gemfile에 추가하면 된다. _config.yml 파일에 다음을 추가한다.</description>
+    </item>
+    
+    <item>
+      <title>[PlayStore] 구글 플레이스토어 정책 위반 메일 대처 방법</title>
+      <link>isprometheo.github.io/posts/20/</link>
+      <pubDate>Thu, 18 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/20/</guid>
+      <description>앱을 올리고 한참이 지난 후 &amp;ldquo;정책 위반으로 Google Play에서 앱이 삭제되었습니다.&amp;ldquo;라는 내용의 메일을 받았다. 내용을 읽어보니 대강 무엇이 문제인지는 바로 알 수 있었다. 앱에서 애드몹(AdMob)과 애</description>
+    </item>
+    
+    <item>
+      <title>[React Native] MultiDex 추가</title>
+      <link>isprometheo.github.io/posts/19/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/19/</guid>
+      <description>앱을 배포한 이후에 비정상 종료에 다음과 같은 내용들이 올라왔다. Caused by: java.lang.ClassNotFoundException: at dalvik.system.BaseDexClassLoader.findClass (BaseDexClassLoader.java:93) 이를 해결하기 위해 검색한 결과 multidex를 추가하면 해결이 된다는 내용을 보고 추가하기로 했다. 기본적인 내용들은 여기에서 보면 된다. Andr</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Firebase 충돌 해결</title>
+      <link>isprometheo.github.io/posts/18/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/18/</guid>
+      <description>앱을 릴리즈로 빌드한 다음 실제 기기나 에뮬레이터에서 실행했을 때 충돌(Crash)이 나는 경우가 있다. 이럴 땐 어디서 에러가 났는지 확인해야하는데 다음의 명령어로 로그를 확인할 수 있다. $ adb logcat *:E zsh의 경우엔 다음과 같이 한다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Firebase Analytics 사용</title>
+      <link>isprometheo.github.io/posts/17/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/17/</guid>
+      <description>앱을 배포한 이후에 사용자가 어떤 행동을 하는지 알고 싶어졌다. 그래서 react-native-firebase를 이용하여 수집하기로 했다. yarn으로 설치하거나 다음을 실행하면 된다. $ npm install --save @react-native-firebase/app $ react-native link @react-native-firebase/app $ npm install --save @react-native-firebase/analytics $</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Webview 사용</title>
+      <link>isprometheo.github.io/posts/16/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/16/</guid>
+      <description>react-native-webview를 사용할 때 gradle.properties에 다음을 추가해야 한다. android.useAndroidX=true android.enableJetifier=true 추가한 후에 빌드할 때 react-native-admob에서 빌드 실패가 나는 경우가 발생한다. &amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Admob 사용</title>
+      <link>isprometheo.github.io/posts/15/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/15/</guid>
+      <description>react-native로 만든 앱에 광고를 넣기 위해 react-native-admob을 사용했다.(안드로이드만 사용) $ npm i --save react-native-admob@next $ react-native link react-native-admob@next android/app/build.gradle에 다음을 추가한다.</description>
+    </item>
+    
+    <item>
+      <title>[React Native] 폰트 추가(2)</title>
+      <link>isprometheo.github.io/posts/14/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/14/</guid>
+      <description>UPDATE React Native에서 특정 폰트를 사용하기 위해서 폰트를 추가해야하는데 다음과 같이 하면 된다. fonts 디렉토리를 만들어 폰트를 넣어준다. react-native-app │ README.md │ index.ios.js │ index.android.js └── ios └── android └── src │ │ │ └── assets │ └── fonts │ └── 폰트 pack</description>
+    </item>
+    
+    <item>
+      <title>[React Native] 앱 빌드하기</title>
+      <link>isprometheo.github.io/posts/13/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/13/</guid>
+      <description>앱을 출시하기 위해서 빌드를 해야한다. keytool로 업로드 키를 생성한다. my-upload-key.keystore와 my-key-alias는 변경해도 된다. $ keytool -genkeypair -v -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000 android/</description>
+    </item>
+    
+    <item>
+      <title>[React Native] docker와 android emulator 충돌</title>
+      <link>isprometheo.github.io/posts/12/</link>
+      <pubDate>Thu, 09 Feb 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/12/</guid>
+      <description>React Native로 개발한 앱을 안드로이드 에뮬레이터로 보기위해선 다음을 실행하여 에뮬레이터를 먼저 실행해야 한다. android avd 하지만 무슨 이유에서인지 실행이 안되었는데 이유는 docker와 충돌이 나서였다. 이를 해결하기 위해 do</description>
+    </item>
+    
+    <item>
+      <title>[React Native] 폰트 추가</title>
+      <link>isprometheo.github.io/posts/11/</link>
+      <pubDate>Thu, 02 Feb 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/11/</guid>
+      <description>React Native에서 특정 폰트를 사용하기 위해서 폰트를 추가해야하는데 다음과 같이 하면 된다. fonts 디렉토리를 만들어 폰트를 넣어준다. react-native-app │ README.md │ index.ios.js │ index.android.js └── ios └── android └── src │ │ │ └── assets │ └── fonts │ └── 폰트 rnpm을</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Window Move</title>
+      <link>isprometheo.github.io/posts/10/</link>
+      <pubDate>Thu, 26 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/10/</guid>
+      <description>Emacs에서 여러 창을 나누어 사용할 때 커서를 다른 창으로 이동하는 단축키는 C-x o 이다. 하지만 창이 여러 개인 경우 이동하는 게 불편하다. init.el에 다음을 추가하여 좀더 빠르게 커서를 다른 창으로 이동할 수 있다. (global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;) &#39;windmove-left)</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Python 개발 환경 구축</title>
+      <link>isprometheo.github.io/posts/9/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/9/</guid>
+      <description>예전에 Emacs로 python 통합 개발 환경을 구성하기 위해서 여러 라이브러리들을 설치해본 적이 있었다. 당시에는 ropemacs를 사용하여 다른 것보다도 자동 완성 기능을 할 수 있도록 했었다. 최근에 다시 Python으로 개발하면서</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Move Line</title>
+      <link>isprometheo.github.io/posts/8/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/8/</guid>
+      <description>Emacs에서는 기본적으로 다른 에디터에서 많이 사용되는 기능 중에 하나인 한 줄을 위아래로 옮길 수 없다. 이를 사용하기 위해서 init.el에 다음을 추가하면 된다. (defun move-line (n) &amp;quot;Move the current line up or down by N lines.&amp;quot; (interactive &amp;quot;p&amp;quot;) (setq col (current-column)) (beginning-of-line) (setq start (point)) (end-of-line) (forward-char) (setq end (point))</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] org-mode 한글 테이블</title>
+      <link>isprometheo.github.io/posts/7/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/7/</guid>
+      <description>Emacs org-mode에서 테이블을 만들 때 한글이 들어가는 경우 테이블이 깨지는 경우가 발생한다. 이는 영어와 한글의 사이즈가 달라서 발생하는 문제로 폰트 크기를 설정해주면 해결할 수 있다. (set-face-font &#39;default &amp;quot;Monaco-12&amp;quot;) (set-fontset-font &amp;quot;fontset-default&amp;quot; &#39;(#x1100 . #xffdc) &#39;(&amp;quot;AppleGothic&amp;quot; . &amp;quot;unicode-bmp&amp;quot;)) (setq face-font-rescale-alist &#39;((&amp;quot;AppleGothic&amp;quot; . 1.2))) 기본 폰</description>
+    </item>
+    
+    <item>
+      <title>[Python] GeoDjango</title>
+      <link>isprometheo.github.io/posts/6/</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/6/</guid>
+      <description>Django에서 일정 거리내의 데이터를 조회하려면 다음과 같은 API를 사용하면되는데 데이터베이스에 따라 사용할 수 있는 것이 제한되어 있다. SpatiaLite를 이용하는 경우에 distance_gt, distance_gte, distance_lt, distance_lte는 사용 가</description>
+    </item>
+    
+    <item>
+      <title>[Python] Django logging</title>
+      <link>isprometheo.github.io/posts/5/</link>
+      <pubDate>Sun, 10 May 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/5/</guid>
+      <description>Django에서 로그를 남기려면 다음과 같이 하면 된다. settings.py에 다음을 추가한다. LOGGING = { &#39;version&#39;: 1, &#39;disable_existing_loggers&#39;: False, &#39;handlers&#39;: { &#39;file&#39;: { &#39;level&#39;: &#39;DEBUG&#39;, &#39;class&#39;: &#39;logging.FileHandler&#39;, &#39;filename&#39;: &#39;/path/to/log/debug.log&#39;, }, }, &#39;loggers&#39;: { &#39;django.request&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;: &#39;DEBUG&#39;, &#39;propagate&#39;: True, }, &#39;django.request&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;: &#39;DEBUG&#39;, &#39;propagate&#39;: True, }, ‘myproject&#39;: { &#39;handlers&#39;: [&#39;file&#39;], &#39;level&#39;:</description>
+    </item>
+    
+    <item>
+      <title>[Python] nginx &#43; gunicorn &#43; Django</title>
+      <link>isprometheo.github.io/posts/4/</link>
+      <pubDate>Sun, 12 Apr 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/4/</guid>
+      <description>Django 프로젝트의 settings.py에 다음을 추가한다. STATIC_ROOT = os.path.join(BASE_DIR, &#39;static&#39;) 그리고 다음 명령어를 이용하여 Django에 내장된 static 파일을 지정한 디렉토리에 저장한다. $ python manage.py collectstatic gunicorn 관련된 설정은 공식 문서와 예제 파일을 참고하여 작성한다.</description>
+    </item>
+    
+    <item>
+      <title>[DB] SQLite</title>
+      <link>isprometheo.github.io/posts/3/</link>
+      <pubDate>Fri, 27 Mar 2015 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/3/</guid>
+      <description>SQLite는 사용되는 응용 프로그램에 내장되는 놀라운 라이브러리이다. 독립적이고 파일 기반 데이터베이스로써 SQLite는 프로세스 기반 관계형 데이터베이스(서버)와 비교해봤을 때 제약이 덜하고 쉽게 정렬된 모든 데이터를</description>
+    </item>
+    
+    <item>
+      <title>[DB] Postgresql &#43; PostGIS</title>
+      <link>isprometheo.github.io/posts/2/</link>
+      <pubDate>Fri, 18 Jul 2014 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/2/</guid>
+      <description>Postgresql에서 위치 정보를 저장하기 위해 PostGIS를 이용한다. postgis를 사용하기 위해서 geos, proj.4를 먼저 설치한다. geos는 Geometry Engine - Open Source의 약어로 좌표 계산에 사용되며, proj.</description>
+    </item>
+    
+    <item>
+      <title>[Python] nginx &#43; Django</title>
+      <link>isprometheo.github.io/posts/1/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/1/</guid>
+      <description>Django와 nginx를 연동하기 위해서 flup 라이브러리를 설치한다. $ pip install flup Django 실행은 다음과 같다. $ python manage.py runfcgi method=prefork pidfile=PID_FILE host=127.0.0.1 port=8000 nginx.conf 에 다음과 같이 추가한다. server { listen 80 server_name localhost; location /static/ { #static url autoindex on; root /static/; #static 파일들이 저장된 디렉토리 } location / { #사용</description>
+    </item>
+    
+  </channel>
+</rss>

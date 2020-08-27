@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/emacs/</link>
+    <description>Recent content in emacs on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Emacs] magithub 사용하기</title>
+      <link>isprometheo.github.io/posts/62/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/62/</guid>
+      <description>Emacs에서 magit을 사용하여 github를 이용하고 있는데 github의 다른 기능들도 사용하고 싶어졌다. 특히 이슈를 등록하거나 보는 것을 하고 싶어 찾아보니 magithub라는 것이 있었다. .authinfo</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] macOS Catalina 디렉토리 접근 문제 해결</title>
+      <link>isprometheo.github.io/posts/48/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/48/</guid>
+      <description>시스템 환경설정 &amp;gt; 개인 정보 보호 &amp;gt; 전체 디스크 접근 권한에 Emacs 앱을 추가했지만 홈 디렉토리를 제외한 문서, 다운로드 등의 디렉토리 접근이 불가능했다. 이유는 Emacs가 ruby로 실행되기 때문이었다. 전체 디스크 접근 권한에 /u</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] macOS Catalina 업그레이드 문제</title>
+      <link>isprometheo.github.io/posts/32/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/32/</guid>
+      <description>Sidecar 기능을 이용해보려고 Catalina로 업그레이드를 했다. 하지만 갖고 있는 기기인 iPad mini 4는 지원 대상이 아니었다. 그리고 Emacs도 사용하기가 살짝 까다로워졌다. 이유는 폴더 접근 권한 때문인데 Emacs에서 폴더 접근 권</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Reveal 추출 안되는 문제</title>
+      <link>isprometheo.github.io/posts/31/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/31/</guid>
+      <description>발표 자료를 만드는데 REVEAL.JS라는 라이브러리가 있어 활용해보고 싶었다. 처음부터 만들어야 하나 하다가 org-reveal이라는 Emacs 패키지를 찾았다. GitHub의 문서를 참고하여 발표 자료를 다 만들고 html로</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] helm 화살표키 디렉토리 탐색</title>
+      <link>isprometheo.github.io/posts/27/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/27/</guid>
+      <description>Emacs에서 C-x C-f로 helm-find-files를 사용하고 있었는데 업데이트 이후에 디렉토리 및 파일을 탐색하는데 화살표키로 상위 디렉토리로 가거나 이전으로 돌아오지 않고 커서가 움직였다. 이전처럼 사용하기 위해 다</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Window Move</title>
+      <link>isprometheo.github.io/posts/10/</link>
+      <pubDate>Thu, 26 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/10/</guid>
+      <description>Emacs에서 여러 창을 나누어 사용할 때 커서를 다른 창으로 이동하는 단축키는 C-x o 이다. 하지만 창이 여러 개인 경우 이동하는 게 불편하다. init.el에 다음을 추가하여 좀더 빠르게 커서를 다른 창으로 이동할 수 있다. (global-set-key (kbd &amp;quot;C-c &amp;lt;left&amp;gt;&amp;quot;) &#39;windmove-left)</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Python 개발 환경 구축</title>
+      <link>isprometheo.github.io/posts/9/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/9/</guid>
+      <description>예전에 Emacs로 python 통합 개발 환경을 구성하기 위해서 여러 라이브러리들을 설치해본 적이 있었다. 당시에는 ropemacs를 사용하여 다른 것보다도 자동 완성 기능을 할 수 있도록 했었다. 최근에 다시 Python으로 개발하면서</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] Move Line</title>
+      <link>isprometheo.github.io/posts/8/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/8/</guid>
+      <description>Emacs에서는 기본적으로 다른 에디터에서 많이 사용되는 기능 중에 하나인 한 줄을 위아래로 옮길 수 없다. 이를 사용하기 위해서 init.el에 다음을 추가하면 된다. (defun move-line (n) &amp;quot;Move the current line up or down by N lines.&amp;quot; (interactive &amp;quot;p&amp;quot;) (setq col (current-column)) (beginning-of-line) (setq start (point)) (end-of-line) (forward-char) (setq end (point))</description>
+    </item>
+    
+    <item>
+      <title>[Emacs] org-mode 한글 테이블</title>
+      <link>isprometheo.github.io/posts/7/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/7/</guid>
+      <description>Emacs org-mode에서 테이블을 만들 때 한글이 들어가는 경우 테이블이 깨지는 경우가 발생한다. 이는 영어와 한글의 사이즈가 달라서 발생하는 문제로 폰트 크기를 설정해주면 해결할 수 있다. (set-face-font &#39;default &amp;quot;Monaco-12&amp;quot;) (set-fontset-font &amp;quot;fontset-default&amp;quot; &#39;(#x1100 . #xffdc) &#39;(&amp;quot;AppleGothic&amp;quot; . &amp;quot;unicode-bmp&amp;quot;)) (setq face-font-rescale-alist &#39;((&amp;quot;AppleGothic&amp;quot; . 1.2))) 기본 폰</description>
+    </item>
+    
+  </channel>
+</rss>

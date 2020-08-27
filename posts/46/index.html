@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.74.3" />
+
+
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
+
+
+<title>[Log] Spark ElasticSearch Parquet - isprometheo의 블로그</title>
+
+
+<meta name="author" content="isprometheo" />
+
+
+<meta name="description" content="isprometheo의 개발 블로그입니다." />
+
+
+<meta name="keywords" content="log, spark, elasticsearch, parquet" />
+
+<meta property="og:title" content="[Log] Spark ElasticSearch Parquet" />
+<meta property="og:description" content="로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="isprometheo.github.io/posts/46/" />
+<meta property="article:published_time" content="2020-01-23T00:00:00+09:00" />
+<meta property="article:modified_time" content="2020-01-23T00:00:00+09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Log] Spark ElasticSearch Parquet"/>
+<meta name="twitter:description" content="로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년"/>
+
+
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body[data-theme='auto'] img {
+            filter: brightness(60%);
+        }
+    }
+
+    body[data-theme='dark'] img {
+        filter: brightness(60%);
+    }
+</style>
+
+
+<link rel="stylesheet" href="/isprometheo.github.io/assets/css/fuji.min.css" />
+
+
+<script async data-ad-client="ca-pub-pub-6014297348098934" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-142175703-1');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142175703-1"></script>
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="isprometheo.github.io">isprometheo의 블로그</a>
+            
+            <span class="title-sub">isprometheo의 좌충우돌 개발 블로그</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="isprometheo.github.io/posts/46/">[Log] Spark ElasticSearch Parquet</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-01-23</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/isprometheo.github.io/tags/log">log</a>&nbsp;<a href="/isprometheo.github.io/tags/spark">spark</a>&nbsp;<a href="/isprometheo.github.io/tags/elasticsearch">elasticsearch</a>&nbsp;<a href="/isprometheo.github.io/tags/parquet">parquet</a>&nbsp;</span>
+
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <p>로그를 <code>ElasticSearch</code>에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다.</p>
+<p>파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다.</p>
+<p>하지만 다년간의 추이를 보기 위해 로그를 분석해서 남겨야할 필요가 있었다.</p>
+<p><code>Spark</code>와 <code>Parquet</code>를 조사하면서 요구 사항을 어떻게 적용할 수 있을지를 고심했었다.</p>
+<p>처음엔 ELK 스택처럼 <code>Kafka</code>로 로그를 받아서 처리하는 방식으로 하려고 시도했었다.</p>
+<p><code>Spark</code> 예제에서 <code>Kafka</code>로 로그를 받아서 단어 개수를 세는 프로그램이 있어 이를 활용하면 되겠다 싶었다.</p>
+<p>하지만 로그를 받는 것은 쉽게 됐지만 <code>Parquet</code>로 저장하는 것이 쉽지 않았다.</p>
+<p>왜냐하면 <code>Parquet</code>는 열 지향 데이터 스토리지 형식이기 때문에 지속적으로 들어오는 데이터를 쓰는 것이 쉽지 않았다.</p>
+<p>그래서 중간에 <code>Avro</code>나 다른 DB에 저장했다가 하루가 지나면 <code>Parquet</code>로 저장하면 되겠다고 생각하고 <code>golang</code>으로 대강 완성을 했었다.</p>
+<p>그러다가 우연히 한 블로그를 발견하고 <code>ElasticSearch</code>에서 <code>Parquet</code>로 변환하여 장기보관하도록 수정했다.</p>
+<p>저장된 인덱스들로 테스트를 해봤는데 여러 가지 애로 사항을 겪을 수 있었다.</p>
+<p>우선은 필드명에 점(.)이 들어가 있는 경우 저장하려고 하면 다음과 같은 에러가 발생했다.</p>
+<pre><code>org.elasticsearch.hadoop.rest.EsHadoopParsingException: org.elasticsearch.hadoop.EsHadoopIllegalStateException: Position for 'nested.foo.bar' not found in row; typically this is caused by a mapping inconsistency
+</code></pre>
+<p>원인은 <code>Parquet</code>로 저장하려면 <code>csv</code> 처럼 중첩되지 않은 표 형식으로 되어야하는데 열의 개수는 같지만 필드명이 각각 달라서 발생한 문제였다.</p>
+<p>그래서 해당 필드명만 추출해서 하면 되지 않을까 해서 <code>es.query</code> 설정도 해보고 <code>filter</code> 기능을 사용해서 해봤지만 결과는 같았다.</p>
+<p>어떻게 하면 가능할지 방법을 찾아보다가 테이블 형태로 추출한 다음에 <code>Paquet</code>로 저장하면 되지 않을까 하고 생각했다.</p>
+<p>예제 코드는 다음과 같다.</p>
+<pre><code>// es.nodes는 ElasticSearch 주소, es.resource는 인덱스명
+val esConf = Map(
+    &quot;es.nodes&quot; -&gt; &quot;elasticsearch&quot;,
+    &quot;es.resource&quot; -&gt; &quot;index&quot;
+)
+
+val rdd = sc.esRDD(esConf)
+// 필드명에 .이 있는 경우 조회할 때 제대로 안돼서 변경
+val result = rdd.map(_._2).map(x =&gt; x.map { case (key, value) =&gt; key.replace(&quot;.&quot;, &quot;_&quot;) -&gt; value })
+val keys = Array(
+    &quot;foo_bar_1&quot;,
+    &quot;foo_bar_2&quot;
+)
+val rowRDD = result.map( x =&gt; {
+    val temp = scala.collection.mutable.Map[String, AnyRef](&quot;@timestamp&quot; -&gt; x(&quot;@timestamp&quot;))
+
+    // 값이 없는 경우 &quot;0.0&quot;으로 설정
+    for (key &lt;- keys if !x.contains(key))
+        temp += (key -&gt; &quot;0.0&quot;)
+
+    // 값이 있는 경우 문자열로 치환
+    for (key &lt;- keys if x.contains(key))
+        temp += (key -&gt; x(key).toString)
+    
+    // 타입을 명확히 하지 않으면 DataFrame을 만들 때 오류 발생
+    Row(
+        new java.sql.Timestamp(temp(&quot;@timestamp&quot;).asInstanceOf[java.util.Date].getTime()),
+        temp(&quot;foo_bar_1&quot;).asInstanceOf[String].toFloat,
+        temp(&quot;foo_bar_2&quot;).asInstanceOf[String].toFloat
+    )
+})
+
+val schema = StructType(Array(
+    StructField(&quot;@timestamp&quot;, TimestampType, true),
+    StructField(&quot;foo_bar_1&quot;, FloatType, true),
+    StructField(&quot;foo_bar_2&quot;, FloatType, true)
+))
+val df = spark.createDataFrame(rowRDD, schema)
+df.write.parquet(&quot;hdfs://hadoop:9000/path/to/save/&quot;)
+</code></pre>
+<p><code>Parquet</code>로 저장할 때 권한이 없다면서 안되는 경우가 있는데 그때에는 다음과 같이 환경 설정에 <code>HADOOP_USER_NAME</code>을 추가하면 된다.</p>
+<pre><code>$ export HADOOP_USER_NAME=hadoop
+</code></pre>
+<h2 id="참고-문헌">참고 문헌</h2>
+<ol>
+<li><a href="http://jason-heo.github.io/elasticsearch/2016/06/28/elasticsearch-with-spark.html" target="_blank">http://jason-heo.github.io/elasticsearch/2016/06/28/elasticsearch-with-spark.html</a></li>
+<li><a href="https://stackoverflow.com/questions/51097818/replace-special-characters-of-column-names-in-spark-dataframe" target="_blank">https://stackoverflow.com/questions/51097818/replace-special-characters-of-column-names-in-spark-dataframe</a></li>
+<li><a href="https://stackoverflow.com/questions/32860831/how-can-i-change-sparkcontext-sparkuser-setting-in-pyspark" target="_blank">https://stackoverflow.com/questions/32860831/how-can-i-change-sparkcontext-sparkuser-setting-in-pyspark</a></li>
+</ol>
+
+    </div>
+</article>
+
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;Load comments
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'isprometheo.github.io\/posts\/46\/';
+                this.page.identifier = '46';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'https-isprometheo-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="isprometheo.github.io/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="isprometheo.github.io/archives/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="isprometheo.github.io/search/">Search</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/401/">401</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/410/">410</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/415/">415</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/_default_/">_default_</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/admob/">admob</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/adsense/">adsense</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/airflow/">airflow</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/analytics/">analytics</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/androidx/">androidx</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/ansible/">ansible</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/aquamacs/">aquamacs</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/async-storage/">async storage</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/buffer/">buffer</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/cache/">cache</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/catalina/">Catalina</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/chrome/">chrome</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/client/">client</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/close/">close</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/component/">component</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/confluent-kafka-go/">confluent-kafka-go</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/db/">db</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/django/">django</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/docker/">docker</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/echo/">echo</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/ejs/">ejs</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/elasticsearch/">elasticsearch</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/electron/">electron</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/emacs/">emacs</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/emulator/">emulator</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/extension/">extension</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/ffmepeg/">ffmepeg</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/ffmpeg/">ffmpeg</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/file/">file</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/firebase/">firebase</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/fluentd/">fluentd</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/geodjango/">geodjango</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/get/">get</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/gnuboard/">gnuboard</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/go/">go</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/golang/">golang</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/gone/">gone</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/gradle/">gradle</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/grunt/">grunt</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/gunicorn/">gunicorn</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/gzip/">gzip</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/hadoop/">hadoop</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/helm/">helm</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/http/">http</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/java/">java</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/jekyll/">jekyll</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/js/">js</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/kafka/">kafka</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/linux/">linux</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/localqueuefull/">localqueuefull</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/log/">log</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/logging/">logging</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/logstash/">logstash</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/macos/">macOS</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/magithub/">magithub</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/mapping/">mapping</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/maven/">maven</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/mediainfo/">mediainfo</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/migration/">migration</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/minima/">minima</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/move-line/">move line</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/multidex/">multidex</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/nginx/">nginx</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/org-mode/">org-mode</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/parquet/">parquet</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/pin/">pin</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/pipeline/">pipeline</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/playstore/">playstore</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/postgis/">postgis</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/postgresql/">postgresql</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/pwa/">pwa</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/python/">python</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/react-native/">react native</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/reconnect/">reconnect</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/regexp/">regexp</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/reveal/">reveal</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/sarama/">sarama</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/spark/">spark</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/sqlite/">sqlite</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/syntaxerror/">syntaxerror</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/tcp/">tcp</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/test/">test</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/timeout/">timeout</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/upload/">upload</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/version/">version</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/vue/">vue</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/waitgroup/">waitgroup</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/watch/">watch</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/webpack/">webpack</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/webstore/">webstore</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/webview/">webview</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/window-move/">window move</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/zen/">zen</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/zeppelin/">zeppelin</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD/">개발 환경</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EB%8C%80%EC%9D%91/">대응</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EB%8F%85%EC%84%9C/">독서</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EB%93%B1%EB%A1%9D/">등록</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0/">디렉토리 제거</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EB%B9%8C%EB%93%9C-%EC%8B%A4%ED%8C%A8/">빌드 실패</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%84%9C%EB%B2%84/">서버</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%84%A0/">선</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%8B%AC%ED%94%8C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4/">심플 소프트웨어</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%95%B1-%EB%B9%8C%EB%93%9C/">앱 빌드</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%9B%B9%EC%8A%A4%ED%86%A0%EC%96%B4/">웹스토어</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%9E%A5%EC%95%A0/">장애</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%9E%AC%EC%82%AC%EC%9A%A9/">재사용</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%A0%95%EC%B1%85%EC%9C%84%EB%B0%98/">정책위반</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%A7%80%EC%97%B0/">지연</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%EC%B6%A9%EB%8F%8C/">충돌</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%81%AC%EB%A1%AC/">크롬</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%85%8C%EC%9D%B4%EB%B8%94/">테이블</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%8A%9C%EB%8B%9D/">튜닝</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%8F%B0%ED%8A%B8/">폰트</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/">프로그램</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%95%9C%EA%B8%80/">한글</a>
+            </span>
+            
+            <span>
+                <a href="isprometheo.github.io/tags/%ED%99%95%EC%9E%A5/">확장</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/isprometheo" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>TOC</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#참고-문헌">참고 문헌</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2020 <a href="isprometheo.github.io">isprometheo</a> |
+                Powered by <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> </span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script defer src="/isprometheo.github.io/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

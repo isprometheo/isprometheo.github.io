@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>410 on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/410/</link>
+    <description>Recent content in 410 on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 19 Dec 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/410/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Golang] 410 Gone</title>
+      <link>isprometheo.github.io/posts/41/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/41/</guid>
+      <description>Golang을 1.13으로 업그레이드를 하고 프로젝트에서 go get ...으로 라이브러리를 다운받으려고 했는데 410 Gone 에러를 내면서 실행이 되지 않았다. 구글에서 검색을 해보니 해결 방법을 바로 찾을 수 있었다. $ export GO111MODULE=on $ export GOPROXY=direct $ export GOSUMDB=off 원</description>
+    </item>
+    
+  </channel>
+</rss>

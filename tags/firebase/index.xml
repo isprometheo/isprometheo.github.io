@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>firebase on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/firebase/</link>
+    <description>Recent content in firebase on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 Aug 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[React Native] 빌드 실패 해결(Firebase Analytics)</title>
+      <link>isprometheo.github.io/posts/25/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/25/</guid>
+      <description>앱을 빌드하는데 다음과 같은 에러가 발생했다. &amp;gt; Configure project :@react-native-firebase_analytics :@react-native-firebase_analytics:firebase.bom using default value: 21.1.0 FAILURE: Build failed with an exception. * Where: Build file &#39;../node_modules/@react-native-firebase/analytics/android/build.gradle&#39; line: 60 * What went wrong: A problem occurred evaluating project &#39;:@react-native-firebase_analytics&#39;. &amp;gt; Could not find method platform() for arguments [com.google.firebase:firebase-bom:21.1.0] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler. android/gradle/wrapper/gradle-wrap</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Firebase 충돌 해결</title>
+      <link>isprometheo.github.io/posts/18/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/18/</guid>
+      <description>앱을 릴리즈로 빌드한 다음 실제 기기나 에뮬레이터에서 실행했을 때 충돌(Crash)이 나는 경우가 있다. 이럴 땐 어디서 에러가 났는지 확인해야하는데 다음의 명령어로 로그를 확인할 수 있다. $ adb logcat *:E zsh의 경우엔 다음과 같이 한다</description>
+    </item>
+    
+    <item>
+      <title>[React Native] Firebase Analytics 사용</title>
+      <link>isprometheo.github.io/posts/17/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/17/</guid>
+      <description>앱을 배포한 이후에 사용자가 어떤 행동을 하는지 알고 싶어졌다. 그래서 react-native-firebase를 이용하여 수집하기로 했다. yarn으로 설치하거나 다음을 실행하면 된다. $ npm install --save @react-native-firebase/app $ react-native link @react-native-firebase/app $ npm install --save @react-native-firebase/analytics $</description>
+    </item>
+    
+  </channel>
+</rss>

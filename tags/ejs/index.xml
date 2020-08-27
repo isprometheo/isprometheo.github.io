@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ejs on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/ejs/</link>
+    <description>Recent content in ejs on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Dec 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/ejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[JS] ejs SyntaxError</title>
+      <link>isprometheo.github.io/posts/42/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/42/</guid>
+      <description>ejs를 2에서 3으로 업그레이드하고 나서 다음과 같은 에러가 발생했다. SyntaxError: Unexpected identifier in index.ejs while compiling ejs If the above error is not helpful, you may want to try EJS-Lint: https://github.com/RyanZim/EJS-Lint Or, if you meant to create an async function, pass `async: true` as an option. at new Function (&amp;lt;anonymous&amp;gt;) ... 에러 로그에서 어디에서 잘못됐는지 정확히 나오지도 않고 로그</description>
+    </item>
+    
+  </channel>
+</rss>

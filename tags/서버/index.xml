@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>서버 on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/%EC%84%9C%EB%B2%84/</link>
+    <description>Recent content in 서버 on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jun 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/%EC%84%9C%EB%B2%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Linux] 서버 장애 대응</title>
+      <link>isprometheo.github.io/posts/66/</link>
+      <pubDate>Thu, 18 Jun 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/66/</guid>
+      <description>서버에 특정 프로그램이 CPU를 과도하게 사용하여 이를 안정시킬 필요가 있었다. 이를 위해서 작업 중인 프로그램을 찾아서 우선 순위를 재조정하여 CPU 사용량을 낮출 수 있었다. $ ps -eo pid,nice,lstart,cmd | grep my_program | grep -v grep $ sudo renice -n 1 pid lstart는 시작</description>
+    </item>
+    
+  </channel>
+</rss>

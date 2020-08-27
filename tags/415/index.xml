@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>415 on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/415/</link>
+    <description>Recent content in 415 on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Oct 2019 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/415/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Golang] Echo 415 에러 해결</title>
+      <link>isprometheo.github.io/posts/30/</link>
+      <pubDate>Thu, 03 Oct 2019 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/30/</guid>
+      <description>Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있</description>
+    </item>
+    
+  </channel>
+</rss>

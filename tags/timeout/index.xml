@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>timeout on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/timeout/</link>
+    <description>Recent content in timeout on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/timeout/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Golang] Go를 사용하면서 발생했던 문제들</title>
+      <link>isprometheo.github.io/posts/58/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/58/</guid>
+      <description>테스트 타임아웃 Go로 테스트를 하는데 다음과 같은 에러가 발생하면서 종료됐다. golang panic: test timed out after 10m0s 이유는 테스트를 수행할 때 기본으로 10분으로 타임아웃이 걸려있었기 때문이었다. $ go test -timeout 1h 위와 같이 타임아웃 시간을 늘려서 수행하</description>
+    </item>
+    
+  </channel>
+</rss>

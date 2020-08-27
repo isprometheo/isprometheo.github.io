@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>airflow on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/airflow/</link>
+    <description>Recent content in airflow on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/airflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Log] Airflow 설치</title>
+      <link>isprometheo.github.io/posts/53/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/53/</guid>
+      <description>Spark에서 하는 일을 주기적으로 수행하기 위해 무엇이 있는지 조사했다. 여러 가지 도구들이 있었는데 그 중에서 Airflow와 Luigi가 좋아보였다. 둘 중에 어떤 걸로 정할 지 고민하다 Airflow로 정했다. 두 가지 모두</description>
+    </item>
+    
+  </channel>
+</rss>

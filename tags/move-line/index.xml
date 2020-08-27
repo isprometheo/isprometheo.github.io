@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>move line on isprometheo의 블로그</title>
+    <link>isprometheo.github.io/tags/move-line/</link>
+    <description>Recent content in move line on isprometheo의 블로그</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="isprometheo.github.io/tags/move-line/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Emacs] Move Line</title>
+      <link>isprometheo.github.io/posts/8/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0900</pubDate>
+      
+      <guid>isprometheo.github.io/posts/8/</guid>
+      <description>Emacs에서는 기본적으로 다른 에디터에서 많이 사용되는 기능 중에 하나인 한 줄을 위아래로 옮길 수 없다. 이를 사용하기 위해서 init.el에 다음을 추가하면 된다. (defun move-line (n) &amp;quot;Move the current line up or down by N lines.&amp;quot; (interactive &amp;quot;p&amp;quot;) (setq col (current-column)) (beginning-of-line) (setq start (point)) (end-of-line) (forward-char) (setq end (point))</description>
+    </item>
+    
+  </channel>
+</rss>

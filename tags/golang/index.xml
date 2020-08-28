@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on isprometheo의 블로그</title>
+    <title>golang on Dev. Blog</title>
     <link>https://isprometheo.github.io/tags/golang/</link>
-    <description>Recent content in golang on isprometheo의 블로그</description>
+    <description>Recent content in golang on Dev. Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0900</lastBuildDate>

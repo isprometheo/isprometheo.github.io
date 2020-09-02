@@ -6,10 +6,19 @@
     <description>Recent content in golang on Dev. Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Aug 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://isprometheo.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Golang] 쿼리 실행할 때 타임아웃 설정하기</title>
+      <link>https://isprometheo.github.io/posts/76/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://isprometheo.github.io/posts/76/</guid>
+      <description>서버 장애가 나서 panic이 발생했다는 알람이 많이 왔었다. 원인은 데이터베이스가 다운돼 쿼리를 실행할 수 없어 발생한 장애였다. 코드를 확인해보니 에러를 확인하고 에러가 없는 경우에 Close 함수를 실행해야 했는데 항상 Close 함수를 실행을</description>
+    </item>
     
     <item>
       <title>[Golang] too many open files 에러 해결</title>

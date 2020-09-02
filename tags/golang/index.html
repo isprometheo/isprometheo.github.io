@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/tags/golang/" />
-<meta property="og:updated_time" content="2020-08-06T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="golang"/>
@@ -109,6 +109,19 @@
 </div>
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/76/">[Golang] 쿼리 실행할 때 타임아웃 설정하기</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-03</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/database">database</a>&nbsp;<a href="/tags/context">context</a>&nbsp;<a href="/tags/timeout">timeout</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        서버 장애가 나서 panic이 발생했다는 알람이 많이 왔었다. 원인은 데이터베이스가 다운돼 쿼리를 실행할 수 없어 발생한 장애였다. 코드를 확인해보니 에러를 확인하고 에러가 없는 경우에 Close 함수를 실행해야 했는데 항상 Close 함수를 실행을
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -224,19 +237,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         Golang을 1.13으로 업그레이드를 하고 프로젝트에서 go get ...으로 라이브러리를 다운받으려고 했는데 410 Gone 에러를 내면서 실행이 되지 않았다. 구글에서 검색을 해보니 해결 방법을 바로 찾을 수 있었다. $ export GO111MODULE=on $ export GOPROXY=direct $ export GOSUMDB=off 원
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/30/">[Golang] Echo 415 에러 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-03</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/echo">echo</a>&nbsp;<a href="/tags/415">415</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있
     </div>
 </div>
 
@@ -392,7 +392,15 @@
             </span>
             
             <span>
+                <a href="/tags/context/">context</a>
+            </span>
+            
+            <span>
                 <a href="/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="/tags/database/">database</a>
             </span>
             
             <span>

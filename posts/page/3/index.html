@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/posts/" />
-<meta property="og:updated_time" content="2020-08-27T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -105,6 +105,19 @@
                 
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/56/">[Log] HDFS Web UI Permission denied</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-04-02</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/hadoop">hadoop</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        HADOOP을 설치하고 웹에서 파일을 추가하거나 삭제할 수 있는데 다음과 같은 에러가 나면서 되지 않았다. Permission denied: user=dr.who, access=WRITE, inode=&quot;/path/to/file&quot;:current_user:supergroup:drwxr-xr-x 현재 HADOOP이 실행되고 있는 환경의 사용자 권한이 추가되지 않아 생기는 에러로 etc/hadoop/co
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -220,19 +233,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         기존에 Java로 만들어진 프로젝트를 Golang으로 다시 만들고 있는데 문자열을 gzip으로 압축한 뒤 base64로 인코딩한 결과를 파일명으로 만드는 로직이 있었다. 처음엔 Golang에서도 gzip과 base64가
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/46/">[Log] Spark ElasticSearch Parquet</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-01-23</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/spark">spark</a>&nbsp;<a href="/tags/elasticsearch">elasticsearch</a>&nbsp;<a href="/tags/parquet">parquet</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년
     </div>
 </div>
 
@@ -470,7 +470,15 @@
             </span>
             
             <span>
+                <a href="/tags/context/">context</a>
+            </span>
+            
+            <span>
                 <a href="/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="/tags/database/">database</a>
             </span>
             
             <span>

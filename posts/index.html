@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/posts/" />
-<meta property="og:updated_time" content="2020-08-27T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -105,6 +105,19 @@
                 
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/76/">[Golang] 쿼리 실행할 때 타임아웃 설정하기</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-03</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/database">database</a>&nbsp;<a href="/tags/context">context</a>&nbsp;<a href="/tags/timeout">timeout</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        서버 장애가 나서 panic이 발생했다는 알람이 많이 왔었다. 원인은 데이터베이스가 다운돼 쿼리를 실행할 수 없어 발생한 장애였다. 코드를 확인해보니 에러를 확인하고 에러가 없는 경우에 Close 함수를 실행해야 했는데 항상 Close 함수를 실행을
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -220,19 +233,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         갑작스럽게 앱이 삭제됐다. &ldquo;앱, 타사 광고, 기기 기능 방해 정책 위반 처리&rdquo; 으로 검색을 해봤다. 여러 가지 많은 결과들이 있었지만 같은 경우가 잘 없어 어떻게 대처해야할지 몰랐다. 메타 데이타나 정책 설정 문
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/66/">[Linux] 서버 장애 대응</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-06-18</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/linux">linux</a>&nbsp;<a href="/tags/%EC%84%9C%EB%B2%84">서버</a>&nbsp;<a href="/tags/%EC%9E%A5%EC%95%A0">장애</a>&nbsp;<a href="/tags/%EB%8C%80%EC%9D%91">대응</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        서버에 특정 프로그램이 CPU를 과도하게 사용하여 이를 안정시킬 필요가 있었다. 이를 위해서 작업 중인 프로그램을 찾아서 우선 순위를 재조정하여 CPU 사용량을 낮출 수 있었다. $ ps -eo pid,nice,lstart,cmd | grep my_program | grep -v grep $ sudo renice -n 1 pid lstart는 시작
     </div>
 </div>
 
@@ -462,7 +462,15 @@
             </span>
             
             <span>
+                <a href="/tags/context/">context</a>
+            </span>
+            
+            <span>
                 <a href="/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="/tags/database/">database</a>
             </span>
             
             <span>

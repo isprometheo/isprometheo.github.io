@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://isprometheo.github.io/posts/76/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/context/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/database/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/golang/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/posts/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/timeout/</loc>
+    <lastmod>2020-09-03T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://isprometheo.github.io/posts/75/</loc>
     <lastmod>2020-08-27T00:00:00+09:00</lastmod>
   </url>
@@ -13,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://isprometheo.github.io/</loc>
-    <lastmod>2020-08-27T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://isprometheo.github.io/tags/log/</loc>
-    <lastmod>2020-08-27T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://isprometheo.github.io/posts/</loc>
     <lastmod>2020-08-27T00:00:00+09:00</lastmod>
   </url>
   
@@ -59,11 +84,6 @@
   
   <url>
     <loc>https://isprometheo.github.io/tags/get/</loc>
-    <lastmod>2020-08-06T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://isprometheo.github.io/tags/golang/</loc>
     <lastmod>2020-08-06T00:00:00+09:00</lastmod>
   </url>
   
@@ -349,11 +369,6 @@
   
   <url>
     <loc>https://isprometheo.github.io/tags/test/</loc>
-    <lastmod>2020-04-23T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://isprometheo.github.io/tags/timeout/</loc>
     <lastmod>2020-04-23T00:00:00+09:00</lastmod>
   </url>
   

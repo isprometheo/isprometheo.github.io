@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/tags/golang/" />
-<meta property="og:updated_time" content="2020-08-06T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="golang"/>
@@ -109,6 +109,19 @@
 </div>
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/30/">[Golang] Echo 415 에러 해결</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-03</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/echo">echo</a>&nbsp;<a href="/tags/415">415</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -275,7 +288,15 @@
             </span>
             
             <span>
+                <a href="/tags/context/">context</a>
+            </span>
+            
+            <span>
                 <a href="/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="/tags/database/">database</a>
             </span>
             
             <span>

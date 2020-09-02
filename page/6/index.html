@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/" />
-<meta property="og:updated_time" content="2020-08-27T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dev. Blog"/>
@@ -105,6 +105,19 @@
                 
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/26/">[React Native] AndroidX Migration</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-08-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/react-native">react native</a>&nbsp;<a href="/tags/androidx">androidx</a>&nbsp;<a href="/tags/migration">migration</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        Gradle 버전을 5로 올리고 빌드를 하니 react-native-admob, react-native-custom-tabs, react-native-smart-splash-screen 에서 다음과 같은 에러가 났다. error: package android.support.annotation does not exist import android.support.annotation.Nullable; ^ error: cannot find symbol import android.support.customtabs.CustomTabsIntent; ^ 이를 해결하려면 각각 다음과 같이 변경하면 된다. // import android.support.annotation.Nullable; import androidx.annotation.Nullable; // import android.support.customtabs.CustomTabsIntent; import androidx.browser.customtabs.CustomTabsIntent; 참고 문헌 https://developer.android.com/jetpack/androidx/migrate
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -220,19 +233,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         앱을 배포한 이후에 사용자가 어떤 행동을 하는지 알고 싶어졌다. 그래서 react-native-firebase를 이용하여 수집하기로 했다. yarn으로 설치하거나 다음을 실행하면 된다. $ npm install --save @react-native-firebase/app $ react-native link @react-native-firebase/app $ npm install --save @react-native-firebase/analytics $
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/16/">[React Native] Webview 사용</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-06-20</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/react-native">react native</a>&nbsp;<a href="/tags/webview">webview</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        react-native-webview를 사용할 때 gradle.properties에 다음을 추가해야 한다. android.useAndroidX=true android.enableJetifier=true 추가한 후에 빌드할 때 react-native-admob에서 빌드 실패가 나는 경우가 발생한다. &gt;
     </div>
 </div>
 
@@ -470,7 +470,15 @@
             </span>
             
             <span>
+                <a href="/tags/context/">context</a>
+            </span>
+            
+            <span>
                 <a href="/tags/cron/">cron</a>
+            </span>
+            
+            <span>
+                <a href="/tags/database/">database</a>
             </span>
             
             <span>

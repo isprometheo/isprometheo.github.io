@@ -15,7 +15,7 @@
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
 
 
-<title>Dev. Blog - isprometheo의 좌충우돌 개발 블로그</title>
+<title>[Log] Spark 현재 날짜 조회 및 형변환 - Dev. Blog</title>
 
 
 <meta name="author" content="isprometheo" />
@@ -24,15 +24,18 @@
 <meta name="description" content="isprometheo의 개발 블로그입니다." />
 
 
-<meta property="og:title" content="Dev. Blog" />
-<meta property="og:description" content="isprometheo의 개발 블로그입니다." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://isprometheo.github.io/" />
-<meta property="og:updated_time" content="2020-09-10T00:00:00+09:00" />
+<meta name="keywords" content="log, zeppelin, spark" />
+
+<meta property="og:title" content="[Log] Spark 현재 날짜 조회 및 형변환" />
+<meta property="og:description" content="ElasticSearch의 인덱스를 불러와서 Zeppelin에서 사용하려고 했다. 인덱스를 제목-날짜(yyyy.MM.dd) 형식으로 만들어서 날짜를 항상 오늘 날짜로 사용하고 싶었다. 이를 위해서 현재 시간 정보를 불" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://isprometheo.github.io/posts/77/" />
+<meta property="article:published_time" content="2020-09-10T00:00:00+09:00" />
+<meta property="article:modified_time" content="2020-09-10T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dev. Blog"/>
-<meta name="twitter:description" content="isprometheo의 개발 블로그입니다."/>
+<meta name="twitter:title" content="[Log] Spark 현재 날짜 조회 및 형변환"/>
+<meta name="twitter:description" content="ElasticSearch의 인덱스를 불러와서 Zeppelin에서 사용하려고 했다. 인덱스를 제목-날짜(yyyy.MM.dd) 형식으로 만들어서 날짜를 항상 오늘 날짜로 사용하고 싶었다. 이를 위해서 현재 시간 정보를 불"/>
 
 
 
@@ -103,264 +106,68 @@
             
             <div class="col-12 col-md-9 float-left content">
                 
-
-
-
-<div class="post">
+<article>
+    
     <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/37/">[JS] RegExp 재사용할 때 문제 해결</a>
+        <a href="https://isprometheo.github.io/posts/77/">[Log] Spark 현재 날짜 조회 및 형변환</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-11-21</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/js">js</a>&nbsp;<a href="/tags/regexp">regexp</a>&nbsp;<a href="/tags/%EC%9E%AC%EC%82%AC%EC%9A%A9">재사용</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-10</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/zeppelin">zeppelin</a>&nbsp;<a href="/tags/spark">spark</a>&nbsp;</span>
 
     </div>
-    <div class="post-item post-summary markdown-body">
-        Javascript에서 정규식을 사용하는 경우가 자주 있는데 그때마다 잊어버리는 게 있다. 반복해서 정규식을 이용해 문자열을 찾는 경우가 있는데 항상 2번째에서는 다음과 같이 값이 나오지 않는 경우가 발생했다 let re = /ab/g; let str = 'abc' re.exec(str)
+    
+    
+    <div class="post-content markdown-body">
+        <p>ElasticSearch의 인덱스를 불러와서 Zeppelin에서 사용하려고 했다.</p>
+<p>인덱스를 제목-날짜(yyyy.MM.dd) 형식으로 만들어서 날짜를 항상 오늘 날짜로 사용하고 싶었다.</p>
+<p>이를 위해서 현재 시간 정보를 불러오는 함수가 필요했는데 다음과 같이 사용했다.</p>
+<pre><code>val ts = (current_timestamp()).expr.eval().toString.toLong
+val dateValue = new java.sql.Timestamp(ts/1000).toLocalDateTime.format(java.time.format.DateTimeFormatter.ofPattern(&quot;yyyy.MM.dd&quot;))
+</code></pre>
+<p>어제 정보도 불러오면 좋을 것 같아 다음과 같이 하여 쉽게 불러올 수 있었다.</p>
+<pre><code>val ts = (current_timestamp()).expr.eval().toString.toLong - 86400000L
+val dateValue = new java.sql.Timestamp(ts/1000).toLocalDateTime.format(java.time.format.DateTimeFormatter.ofPattern(&quot;yyyy.MM.dd&quot;))
+</code></pre>
+<p>특정 데이터를 기준으로 정렬을 하거나 조건으로 조회하려고 했는데 해당 데이터가 문자열이었다.</p>
+<p>그래서 정렬을 제대로 하기 위해 형변환이 필요했는데 실수형으로 변환해야 했다.</p>
+<p>withColumn과 cast로 쉽게 해당 열의 타입을 변환할 수 있었다.</p>
+<pre><code>import org.apache.spark.sql.types.FloatType
+
+...
+df.withColumn(&quot;etc&quot;, df(&quot;etc&quot;) cast FloatType).createOrReplaceTempView(&quot;temp&quot;)
+</code></pre>
+<h2 id="참고-문헌">참고 문헌</h2>
+<ol>
+<li><a href="https://stackoverflow.com/questions/55267527/spark-getting-current-date-in-string/55267586" target="_blank">https://stackoverflow.com/questions/55267527/spark-getting-current-date-in-string/55267586</a></li>
+<li><a href="https://stackoverflow.com/questions/52590524/sparkstream-convert-string-to-float-in-sql-query" target="_blank">https://stackoverflow.com/questions/52590524/sparkstream-convert-string-to-float-in-sql-query</a></li>
+</ol>
+
     </div>
+</article>
+
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;Load comments
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = 'https:\/\/isprometheo.github.io\/posts\/77\/';
+                this.page.identifier = '77';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'https-isprometheo-github-io' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
 </div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/36/">[JS] watch를 사용할 수 있는 컴포넌트 만들기</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-11-14</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/vue">vue</a>&nbsp;<a href="/tags/watch">watch</a>&nbsp;<a href="/tags/component">component</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Vue로 된 프로젝트가 있는데 하나의 파일에서 화면을 전부 만들고 있었다. 각 부분들을 컴포넌트로 만드는데 자식 컴포넌트에 값을 넘겨 주면서 watch로 변경을 감지할 수 있도록 하는 기능이 필요했다. v-model을 사용하면 쉽게
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/35/">[AdMob] 정책 위반 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-11-07</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/admob">admob</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        AdMob에서 정책을 위반하고 있다는 메일을 받았다. 그래서 정책 센터에서 자세한 내용을 살펴보니 전면 광고의 문제였다. 기존의 전면 광고 노출 시점은 스플래시 화면 -&gt; 콘텐츠 로드 -&gt; 전면 광고 순이었다. 코드 상으로는 스플래시 화면 다
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/34/">[React Native] AdMob 라이브러리 변경</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-31</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/react-native">react native</a>&nbsp;<a href="/tags/admob">admob</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        기존에 사용하던 라이브러리로 AdMob 광고를 표시하고 있었는데 정책 위반 메일을 받아서 이를 처리할 필요가 있었다. 그래서 react-native-admob 저장소에서 문서를 읽어봤다. isReady 메소드로 처리가 가능하겠다는 생각이 들었다. 그러다 우연히 react-nat
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/33/">[JS] Grunt Webpack 버전별로 빌드하기</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-24</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/js">js</a>&nbsp;<a href="/tags/grunt">grunt</a>&nbsp;<a href="/tags/webpack">webpack</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Javascript 라이브러리를 만든 후 버전별로 빌드할 필요가 생겼다. alpha/beta/release 이렇게 빌드를 하려고 했는데 생각처럼 되지 않아 시행착오를 여러 번 겪었다. Grunt와 Webpack을 사용하여 빌드하고 있는데 Webpack은 env 파라미터에서 버전 정
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/32/">[Emacs] macOS Catalina 업그레이드 문제</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-17</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/emacs">emacs</a>&nbsp;<a href="/tags/aquamacs">aquamacs</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Sidecar 기능을 이용해보려고 Catalina로 업그레이드를 했다. 하지만 갖고 있는 기기인 iPad mini 4는 지원 대상이 아니었다. 그리고 Emacs도 사용하기가 살짝 까다로워졌다. 이유는 폴더 접근 권한 때문인데 Emacs에서 폴더 접근 권
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/31/">[Emacs] Reveal 추출 안되는 문제</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-10</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/emacs">emacs</a>&nbsp;<a href="/tags/reveal">reveal</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        발표 자료를 만드는데 REVEAL.JS라는 라이브러리가 있어 활용해보고 싶었다. 처음부터 만들어야 하나 하다가 org-reveal이라는 Emacs 패키지를 찾았다. GitHub의 문서를 참고하여 발표 자료를 다 만들고 html로
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/30/">[Golang] Echo 415 에러 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-10-03</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/echo">echo</a>&nbsp;<a href="/tags/415">415</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Echo로 개발하여 API로 통신하는데 Content-Type: text/plain으로 통신을 해야했다. func(c echo.Context) (err error) { body := &amp;Body{} if err = c.Bind(body); err != nil { return } return c.JSON(http.StatusOK, body) } 위와 같이 echo.Context.Bind를 이용하여 JSON 형식을 파싱하여 사용하고 있
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/29/">[AdSense] Google AdSense PIN 인증</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-09-19</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/adsense">adsense</a>&nbsp;<a href="/tags/pin">pin</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        애드센스 페이지에 들어가보니 PIN 번호를 입력하라는 문구가 나왔다. 그래서 눌러보니 우편으로 발송한 PIN 번호를 입력하면 된다고 설명이 돼있었다. 2~4주 정도 걸린다고 설명이 돼있는데다가 추석도 있어서 더 걸릴 줄 알았는데 2주만에 왔
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/28/">[Log] Fluentd Kafka 지연 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-09-12</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/fluentd">fluentd</a>&nbsp;<a href="/tags/kafka">kafka</a>&nbsp;<a href="/tags/%EC%A7%80%EC%97%B0">지연</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        로그를 분석하기 위해 Fluentd, Kafka, ELK(Elastic Search, Logstash, Kibana)를 연동하여 사용하고 있는데 특정 토픽의 로그가 지연되고 있었다. 처음엔 Logstash에서 Elastic Search로 전송하여 인덱싱하는 게 느린 것으로 판단하여 Elastic Search의 설정을
-    </div>
-</div>
-
-
-
-
-
-
-
-
-<div class="pagination">
-    
-    <div class="pag-first">
-        <a href="/"><i class="iconfont icon-caret-back-circle-sharp"></i></a>
-    </div>
-    
-    
-    <div class="pag-previous">
-        <a href="/page/4/"><i class="iconfont icon-chevron-back-circle-sharp"></i></a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/page/3/">3</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/page/4/">4</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item pag-current">
-        <a href="/page/5/">5</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/page/6/">6</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-item">
-        <a href="/page/7/">7</a>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="pag-next">
-        <a href="/page/6/"><i class="iconfont icon-chevron-forward-circle-sharp"></i></i></a>
-    </div>
-    
-    
-    <div class="pag-last">
-        <a href="/page/8/"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
-    </div>
-    
-</div>
-
 
 
             </div>
@@ -900,6 +707,15 @@
     </div>
     
     
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>TOC</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#참고-문헌">참고 문헌</a></li>
+  </ul>
+</nav>
+    </div>
     
     
 </aside>

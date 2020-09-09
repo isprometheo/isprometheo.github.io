@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/posts/" />
-<meta property="og:updated_time" content="2020-09-03T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-10T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -105,6 +105,19 @@
                 
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/47/">[Golang] Java gzip migration</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-01-29</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/java">java</a>&nbsp;<a href="/tags/gzip">gzip</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        기존에 Java로 만들어진 프로젝트를 Golang으로 다시 만들고 있는데 문자열을 gzip으로 압축한 뒤 base64로 인코딩한 결과를 파일명으로 만드는 로직이 있었다. 처음엔 Golang에서도 gzip과 base64가
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -220,19 +233,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         Fluentd에서 로그를 전송하는 부분을 수정한 이후로 잘 동작하고 있었지만 flush_interval을 5분으로 하여 실시간으로 로그를 볼 수가 없었다. 그리고 Fluentd 서버를 확인해 보니 로그 전송 버퍼가 많이 쌓여 있었다. 그래서
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/37/">[JS] RegExp 재사용할 때 문제 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-11-21</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/js">js</a>&nbsp;<a href="/tags/regexp">regexp</a>&nbsp;<a href="/tags/%EC%9E%AC%EC%82%AC%EC%9A%A9">재사용</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Javascript에서 정규식을 사용하는 경우가 자주 있는데 그때마다 잊어버리는 게 있다. 반복해서 정규식을 이용해 문자열을 찾는 경우가 있는데 항상 2번째에서는 다음과 같이 값이 나오지 않는 경우가 발생했다 let re = /ab/g; let str = 'abc' re.exec(str)
     </div>
 </div>
 

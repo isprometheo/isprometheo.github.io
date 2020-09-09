@@ -6,10 +6,19 @@
     <description>Recent content on Dev. Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://isprometheo.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Log] Spark 현재 날짜 조회 및 형변환</title>
+      <link>https://isprometheo.github.io/posts/77/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://isprometheo.github.io/posts/77/</guid>
+      <description>ElasticSearch의 인덱스를 불러와서 Zeppelin에서 사용하려고 했다. 인덱스를 제목-날짜(yyyy.MM.dd) 형식으로 만들어서 날짜를 항상 오늘 날짜로 사용하고 싶었다. 이를 위해서 현재 시간 정보를 불</description>
+    </item>
     
     <item>
       <title>[Golang] 쿼리 실행할 때 타임아웃 설정하기</title>

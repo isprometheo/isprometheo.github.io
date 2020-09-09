@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/tags/log/" />
-<meta property="og:updated_time" content="2020-08-27T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-10T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="log"/>
@@ -109,6 +109,19 @@
 </div>
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/77/">[Log] Spark 현재 날짜 조회 및 형변환</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-10</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/zeppelin">zeppelin</a>&nbsp;<a href="/tags/spark">spark</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        ElasticSearch의 인덱스를 불러와서 Zeppelin에서 사용하려고 했다. 인덱스를 제목-날짜(yyyy.MM.dd) 형식으로 만들어서 날짜를 항상 오늘 날짜로 사용하고 싶었다. 이를 위해서 현재 시간 정보를 불
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -224,19 +237,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         로그를 ElasticSearch에 쌓아서 실시간으로 보고 있었는데 로그의 양이 많아서 차지하는 용량이 계속 커지고 있었다. 파일로도 로그를 남겨두기는 해서 한동안은 80 ~ 90% 정도 되면 인덱스를 지워서 용량을 확보했다. 하지만 다년
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/40/">[Log] Logstash Kafka 연동 에러 해결</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-12-12</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/log">log</a>&nbsp;<a href="/tags/logstash">logstash</a>&nbsp;<a href="/tags/kafka">kafka</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        Lostash에서 input으로 kafka를 사용하고 있었는데 다음과 같은 오류가 나왔다. [WARN ][org.apache.kafka.common.utils.AppInfoParser] Error registering AppInfo mbean javax.management.InstanceAlreadyExistsException: kafka.consumer:type=app-info,id=logstash-1 at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:436) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1855) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:955) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:890) ~[?:?] at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:320) ~[?:?] at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522) ~[?:?] 중복되는 설정들이 많아 합치면서 pipeline을 사용하도록 수정했는
     </div>
 </div>
 

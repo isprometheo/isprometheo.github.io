@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>videojs on Dev. Blog</title>
+    <link>https://isprometheo.github.io/tags/videojs/</link>
+    <description>Recent content in videojs on Dev. Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Sep 2020 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://isprometheo.github.io/tags/videojs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[JS] video.js 자동 재생이 안될 때 해결 방법</title>
+      <link>https://isprometheo.github.io/posts/78/</link>
+      <pubDate>Thu, 24 Sep 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://isprometheo.github.io/posts/78/</guid>
+      <description>video.js를 이용하여 HSL 동영상을 재생하는데 자동 재생이 안되는 경우가 있었다. 그래서 원인을 찾아보기 위해 가능한 모든 이벤트에 로그를 찍도록 했다. 그리고 HLS.js 에서도 같은 현상이 일어나는지도 확인해봤다. 우선 HLS.js</description>
+    </item>
+    
+  </channel>
+</rss>

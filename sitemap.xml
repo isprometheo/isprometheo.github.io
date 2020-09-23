@@ -3,22 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://isprometheo.github.io/posts/78/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/autoplay/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/hlsjs/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/js/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/posts/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://isprometheo.github.io/tags/videojs/</loc>
+    <lastmod>2020-09-24T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://isprometheo.github.io/posts/77/</loc>
     <lastmod>2020-09-10T00:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://isprometheo.github.io/</loc>
-    <lastmod>2020-09-10T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://isprometheo.github.io/tags/log/</loc>
-    <lastmod>2020-09-10T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://isprometheo.github.io/posts/</loc>
     <lastmod>2020-09-10T00:00:00+09:00</lastmod>
   </url>
   
@@ -474,11 +499,6 @@
   
   <url>
     <loc>https://isprometheo.github.io/posts/49/</loc>
-    <lastmod>2020-02-13T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://isprometheo.github.io/tags/js/</loc>
     <lastmod>2020-02-13T00:00:00+09:00</lastmod>
   </url>
   

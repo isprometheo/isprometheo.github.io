@@ -28,7 +28,7 @@
 <meta property="og:description" content="isprometheo의 개발 블로그입니다." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://isprometheo.github.io/posts/" />
-<meta property="og:updated_time" content="2020-09-10T00:00:00+09:00" />
+<meta property="og:updated_time" content="2020-09-24T00:00:00+09:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -105,6 +105,19 @@
                 
 
 
+
+<div class="post">
+    <h2 class="post-item post-title">
+        <a href="https://isprometheo.github.io/posts/68/">[Golang] 커맨드 명령 동시 실행 및 디렉토리 제거</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-07-02</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/waitgroup">waitgroup</a>&nbsp;<a href="/tags/%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%A0%9C%EA%B1%B0">디렉토리 제거</a>&nbsp;</span>
+
+    </div>
+    <div class="post-item post-summary markdown-body">
+        신규 서버를 만들면서 두가지 기능이 필요했다. 첫째는 명령어를 동시에 실행해서 속도를 높이는 것과 데이터가 있는 디렉토리를 제거하는 것이었다. 명령어 동시 실행하기 Golang에서 WaitGroup은 모든 goroutine
+    </div>
+</div>
 
 <div class="post">
     <h2 class="post-item post-title">
@@ -220,19 +233,6 @@
     </div>
     <div class="post-item post-summary markdown-body">
         Go로 만든 프로젝트에서 kafka 연동하여 로그를 수집하는데 confluent-kafka-go를 사용하고 있었다. package main import ( &quot;fmt&quot; &quot;github.com/confluentinc/confluent-kafka-go/kafka&quot; ) var kafkaClient *kafka.Producer func main() { kafkaClient, _ = kafka.NewProducer(&amp;kafka.ConfigMap{ &quot;bootstrap.servers&quot;: &quot;broker:9092&quot;, &quot;acks&quot;: 1, }) go func() { for e := range p.Events() { switch ev := e.(type) { case *kafka.Message: m := ev if m.TopicPartition.Error != nil { fmt.Printf(&quot;Delivery failed: %v,
-    </div>
-</div>
-
-<div class="post">
-    <h2 class="post-item post-title">
-        <a href="https://isprometheo.github.io/posts/58/">[Golang] Go를 사용하면서 발생했던 문제들</a>
-    </h2>
-    <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-04-23</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/golang">golang</a>&nbsp;<a href="/tags/test">test</a>&nbsp;<a href="/tags/timeout">timeout</a>&nbsp;<a href="/tags/401">401</a>&nbsp;<a href="/tags/gone">gone</a>&nbsp;<a href="/tags/version">version</a>&nbsp;</span>
-
-    </div>
-    <div class="post-item post-summary markdown-body">
-        테스트 타임아웃 Go로 테스트를 하는데 다음과 같은 에러가 발생하면서 종료됐다. golang panic: test timed out after 10m0s 이유는 테스트를 수행할 때 기본으로 10분으로 타임아웃이 걸려있었기 때문이었다. $ go test -timeout 1h 위와 같이 타임아웃 시간을 늘려서 수행하
     </div>
 </div>
 
@@ -438,6 +438,10 @@
             </span>
             
             <span>
+                <a href="/tags/autoplay/">autoplay</a>
+            </span>
+            
+            <span>
                 <a href="/tags/buffer/">buffer</a>
             </span>
             
@@ -587,6 +591,10 @@
             
             <span>
                 <a href="/tags/helm/">helm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/hlsjs/">hlsjs</a>
             </span>
             
             <span>
@@ -755,6 +763,10 @@
             
             <span>
                 <a href="/tags/version/">version</a>
+            </span>
+            
+            <span>
+                <a href="/tags/videojs/">videojs</a>
             </span>
             
             <span>

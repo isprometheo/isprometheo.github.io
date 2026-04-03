@@ -20,8 +20,7 @@
        top: 0;
        left: 0;
        width: 100vw;
-       height: calc(100vh - 110px);
-       object-fit: cover;
+       height: calc(100vh - 210px);
      }
      .capture {
        display: flex;
@@ -31,15 +30,15 @@
        padding: 5px;
        border-top: 1px solid;
        width: 100%;
-       height: 100px;
+       height: 200px;
        bottom: 0;
        background: #000;
      }
      .capture button {
        border: none;
        border-radius: 100%;
-       width: 100px;
-       height: 100px;
+       width: 200px;
+       height: 200px;
      }
 
      @media screen and (orientation: landscape) {
@@ -56,6 +55,10 @@
          width: 100px;
          height: 100%;
          right: 0;
+       }
+       .capture button {
+         width: 100px;
+         height: 100px;
        }
      }
     </style>
@@ -178,16 +181,19 @@
 
       video.style.display = "none";
 
-      context.font = '30px Arial';
-      context.fillStyle = 'white';
-      context.strokeStyle = 'black';
+      context.font = "30px Arial";
+      context.fillStyle = "white";
+      context.strokeStyle = "white";
       context.lineWidth = 1;
-
+      context.textAlign = "right"; 
+      context.textBaseline = "bottom"; 
       const now = new Date();
       const dateStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
 
-      context.fillText(dateStr, canvas.width, canvas.height - 10);
-      context.strokeText(dateStr, canvas.width, canvas.height - 10);
+      context.fillText(dateStr, canvas.width - 10, canvas.height - 10);
+      context.strokeText(dateStr, canvas.width - 10, canvas.height - 10);
+      /* context.fillText(dateStr, 10, 30); */
+      /* context.strokeText(dateStr, 10, 30); */
 
       const newImageData = canvas.toDataURL("image/png");
       const img = new Image();
@@ -222,6 +228,7 @@
     });
 
     window.addEventListener("resize", () => {
+      if (!originalImage) return;
       const context = canvas.getContext("2d");
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;

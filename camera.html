@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>카메라 테스트</title>
+    <title>My Camera</title>
     <style>
      body {
        margin: 0;
@@ -12,7 +12,7 @@
        top: 0;
        left: 0;
        width: 100vw;
-       height: 100vh;
+       height: calc(100vh - 110px);
        object-fit: cover;
      }
      canvas {
@@ -20,7 +20,7 @@
        top: 0;
        left: 0;
        width: 100vw;
-       height: 100vh;
+       height: calc(100vh - 110px);
        object-fit: cover;
      }
      .capture {
@@ -33,6 +33,7 @@
        width: 100%;
        height: 100px;
        bottom: 0;
+       background: #000;
      }
      .capture button {
        border: none;
@@ -42,6 +43,14 @@
      }
 
      @media screen and (orientation: landscape) {
+       video {
+         width: calc(100vw - 110px);
+         height: 100vh;
+       }
+       canvas {
+         width: calc(100vw - 110px);
+         height: 100vh;
+       }
        .capture {
          border-left: 1px solid;
          width: 100px;
@@ -56,17 +65,69 @@
     <video id="video" autoplay playsinline>Video stream not available.</video>
 
     <div class="capture">
-      <button id="button">찍기</button>
+      <button id="button"></button>
     </div>
 
     <script type="text/javascript">
+    class CanvasManager {
+      constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext("2d");
+        this.offscreen = document.createElement("canvas");
+        this.isReady = false;
+
+        this._bindEvents();
+      }
+
+      _bindEvents() {
+        let resizeTimer;
+
+        window.addEventListener("resize", () => {
+          clearTimeout(resizeTimer);
+
+          this.save();
+
+          resizeTimer = setTimeout(() => {
+            this._resize();
+            this.restore();
+          }, 100);
+        });
+      }
+
+      _resize() {
+        this.canvas.width = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
+      }
+
+      save() {
+        if (!this.isReady) return;
+        this.offscreen.width = this.canvas.width;
+        this.offscreen.height = this.canvas.height;
+        this.offscreen.getContext('2d').drawImage(this.canvas, 0, 0);
+      }
+
+      restore() {
+        if (!this.offscreen.width) return;
+        this.ctx.drawImage(
+          this.offscreen,
+          0, 0,
+          this.canvas.width,
+          this.canvas.height
+        );
+      }
+
+      markReady() {
+        this.isReady = true;
+      }
+    }
+
     const video = document.getElementById("video");
     const canvas = document.getElementById("canvas");
     const button = document.getElementById("button");
 
     const constraints = {
       video: {
-        facingMode: { exact: "environment" },
+        /* facingMode: { exact: "environment" }, */
       },
       audio: false
     };
@@ -81,6 +142,7 @@
 
     let streaming = false;
     let isCpatured = false;
+    let originalImage = null;
 
     navigator.mediaDevices
              .getUserMedia(constraints)
@@ -114,7 +176,6 @@
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
       const data = canvas.toDataURL("image/png");
 
-      button.innerText = "다시 찍기";
       video.style.display = "none";
 
       context.font = '30px Arial';
@@ -131,6 +192,7 @@
       const newImageData = canvas.toDataURL("image/png");
       const img = new Image();
       img.src = newImageData;
+      originalImage = img;
       context.drawImage(img, 0, 0, canvas.width, canvas.height);
 
       /* const a = document.createElement("a");
@@ -152,12 +214,18 @@
       if (isCpatured) {
         clearPhoto();
         isCpatured = false;
-        button.innerText = "찍기";
         video.style.display = "block";
         return;
       }
       takePicture();
       e.preventDefault();
+    });
+
+    window.addEventListener("resize", () => {
+      const context = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      context.drawImage(originalImage, 0, 0, canvas.width, canvas.height);
     });
     </script>
   </body>
